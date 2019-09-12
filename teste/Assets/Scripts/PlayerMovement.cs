@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D rb;
     public float runSpeed = 40f;
     bool jump = false;
+    bool ground = true;
     int contSeta = 0;
     float timeDash = 0.3f;
     float horizontalMove = 0f;
@@ -94,10 +95,20 @@ public class PlayerMovement : MonoBehaviour
         }
    
     }
-    public void OnLanding()
+   void OnColisionEnter(Collision other)
     {
-        animator.SetBool("isJumping", false);
-        
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            ground = true;
+        } else
+        {
+            ground = false;
+        }
+            
+        if(ground)
+        {
+            animator.SetBool("isJumping", false);
+        }
     }
     void Dash()
     {
