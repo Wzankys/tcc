@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\User\.Rider2019.1\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\User\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_tcc.-1843654132.00" t="ExcludeRecursive" />
+    <e p="F:\Documentos\Faculdade\tcc" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Scripts" t="Include">
+          <e p="CharacterController2D.cs" t="Include" />
+          <e p="comboSystem.cs" t="Include" />
+          <e p="EspecialIchigo.cs" t="Include" />
+          <e p="PlayerAttack.cs" t="Include" />
+          <e p="PlayerMovement.cs" t="Include" />
+          <e p="Stats.cs" t="Include" />
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="tcc.sln" t="IncludeFlat" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

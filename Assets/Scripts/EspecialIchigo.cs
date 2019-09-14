@@ -11,7 +11,7 @@ public class EspecialIchigo : MonoBehaviour
     float timeAnim = 0.0f;
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Z)&& Input.GetKeyDown(KeyCode.X))
+        if(Input.GetKeyDown(KeyCode.DownArrow)&& Input.GetKeyDown(KeyCode.Z))
         {
             Debug.Log("Deu boa");
             carregarRea();

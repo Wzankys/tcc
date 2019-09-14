@@ -4,8 +4,17 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    /*--------------------------------------------------------------------------------------------------------------------------------*/
+    
+    //declaracao dos controladores
+    
     public CharacterController2D controller;
     public Animator animator;
+    
+    /*--------------------------------------------------------------------------------------------------------------------------------*/
+
+    //declaracao de variaveis do RB do personagem para movimentacao
+
     public float dashDist = 0;
 
     private int dire;
@@ -18,33 +27,19 @@ public class PlayerMovement : MonoBehaviour
     float timeDash = 0.3f;
     float horizontalMove = 0f;
     Vector3 sideDash;
+    
+    /*--------------------------------------------------------------------------------------------------------------------------------*/
 
-
-    // Start is called before the first frame update
-
-    // Update is called once per frame
-    /*void Dash(int lado)
-    {
-        
-        if (contSeta >= 2 && timeDash >0 && lado ==1)
-        {
-            //Debug.Log(" Its Works my little friends");
-            
-            animator.SetBool("isDash", true);
-            contSeta = 0;
-        }
-        else
-        {
-            timeDash = 0.5f;
-            contSeta++;
-        }
-    }*/
-
+    //inicializacao
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
+    /*--------------------------------------------------------------------------------------------------------------------------------*/
+
+    //update
+    
     void Update()
     {
         horizontalMove = Input.GetAxisRaw("Horizontal")*runSpeed;
@@ -55,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
             jump = true;
             animator.SetBool("isJumping", true);
         }
-       if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             dire = 2;
             if (contSeta >= 2 && timeDash > 0 && dire==2)
@@ -95,7 +90,27 @@ public class PlayerMovement : MonoBehaviour
         }
    
     }
-   void OnColisionEnter(Collision other)
+    
+    
+    void FixedUpdate()
+    {
+        controller.Move(horizontalMove * Time.fixedDeltaTime, false,jump);
+        jump = false;
+    }
+    /*--------------------------------------------------------------------------------------------------------------------------------*/
+    //Declaração de funções do personagem
+    //Função Dash
+    
+    void Dash()
+    {
+        animator.SetBool("isDash", false);
+    }
+    
+    /*--------------------------------------------------------------------------------------------------------------------------------*/
+
+    //area de checagem de colisoes
+    //collision
+    void OnColisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Ground"))
         {
@@ -110,14 +125,13 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("isJumping", false);
         }
     }
-    void Dash()
+    //triggers
+    void OnTriggerEnter(Collider other)
     {
-        animator.SetBool("isDash", false);
+
     }
 
-     void FixedUpdate()
-    {
-        controller.Move(horizontalMove * Time.fixedDeltaTime, false,jump);
-        jump = false;
-    }
+    /*-------------------------------------------------------------------------------------------------------------------------------*/
+
+
 }
