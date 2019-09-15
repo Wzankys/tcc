@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.Serialization;
 
 public class PlayerAttack : MonoBehaviour {
-	
-	[FormerlySerializedAs("Stats")] public Stats stats;
+
+	public AttackStats attack;
 	private Animator animator;
 	private float cooldown;
 	private bool canAttack = true;
@@ -16,22 +16,22 @@ public class PlayerAttack : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (!stats) return;
+		if (!attack) return;
 		Attack ();
 	}
 
 	void Attack () {
-		var axis = Input.GetAxisRaw (stats.keyAxis);
+		var axis = Input.GetAxisRaw (attack.keyAxis);
 		if (axis > 0 && canAttack) {
 			Debug.Log ("Teste");
-			animator.SetTrigger (stats.animation);
+			animator.SetTrigger (attack.animation);
 			StartCoroutine (CooldownCoroutine ());
 		}
 	}
 
 	IEnumerator CooldownCoroutine () {
 		canAttack = false;
-		yield return new WaitForSeconds (stats.atkCooldown);
+		yield return new WaitForSeconds (attack.atkCooldown);
 		canAttack = true;
 	}
 }
