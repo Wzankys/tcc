@@ -33,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
     int contSeta = 0;
     float timeDash = 0.3f;
     float horizontalMove = 0f;
+    float verticalMove = 0f;
     Vector3 sideDash;
     
     /*--------------------------------------------------------------------------------------------------------------------------------*/
@@ -66,11 +67,46 @@ public class PlayerMovement : MonoBehaviour
         
         //pega o pulo pro player 1 ou 2
 
-        if(Input.GetButtonDown("Jump"))
+        /*if(Input.GetButtonDown("Jump"))
         {
             jump = true;
             animator.SetBool("isJumping", true);
+        }*/
+        
+        if (playerNumber == 1)
+        {
+            if(Input.GetButtonDown("Jump1"))
+            {
+                jump = true;
+                animator.SetBool("isJumping", true);
+            }
         }
+
+        if (playerNumber == 2)
+        {
+            if(Input.GetButtonDown("Jump2"))
+            {
+                jump = true;
+                animator.SetBool("isJumping", true);
+            }
+            
+        }
+
+       
+        /*------------------------------------------------------------------------------------------------------------------------------*/
+
+        //pega o dash pro player 1 ou 2
+        //player 1
+        if (playerNumber == 1)
+        {
+            
+        }
+
+        if (playerNumber == 2)
+        {
+            
+        }
+
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             dire = 2;
@@ -86,9 +122,6 @@ public class PlayerMovement : MonoBehaviour
                 contSeta++;
             }
         }
-        
-        /*------------------------------------------------------------------------------------------------------------------------------*/
-
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             dire = 1;
@@ -112,8 +145,12 @@ public class PlayerMovement : MonoBehaviour
         {
             timeDash = 0;
         }
+        
+        //player 2
    
     }
+    /*------------------------------------------------------------------------------------------------------------------------------*/
+
     
     
     void FixedUpdate()
