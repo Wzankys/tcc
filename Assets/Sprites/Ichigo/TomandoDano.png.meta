@@ -1,16 +1,19 @@
 fileFormatVersion: 2
-guid: bc46de45952472f42afe3036c1b7da39
+guid: 737ddfa446fd7d149ba7fefa1e9680e9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2537882373423050008
-    second: Block_0
+      213: -59066101396820148
+    second: hit_0
   - first:
-      213: 2189487477073400709
-    second: Block_1
+      213: -9037724387597929990
+    second: hit_1
   - first:
-      213: -1470946536411257380
-    second: Block_2
+      213: 8501104746477335304
+    second: hit_2
+  - first:
+      213: 7761068069398732630
+    second: hit_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -89,134 +92,89 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: tvOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: Lumin
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Block_0
+      name: hit_0
       rect:
         serializedVersion: 2
         x: 2
         y: 0
         width: 60
-        height: 56
+        height: 47
       alignment: 9
-      pivot: {x: 0.4042607, y: 0.2876258}
+      pivot: {x: 0.38771927, y: 0.4148936}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83eb2ff8ccaee5842a133195106e2b0a
-      internalID: 2537882373423050008
+      spriteID: 98fa065b929804c48ae4abbd43cfdc1b
+      internalID: -59066101396820148
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Block_1
+      name: hit_1
       rect:
         serializedVersion: 2
-        x: 69
+        x: 67
         y: 0
-        width: 45
-        height: 56
+        width: 57
+        height: 47
       alignment: 9
-      pivot: {x: 0.4069201, y: 0.2876258}
+      pivot: {x: 0.32187304, y: 0.4148936}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75a4ca4e87c39b84c94256e93f70cf96
-      internalID: 2189487477073400709
+      spriteID: 2b19eb91e939c42449ef8a1c9d5e21be
+      internalID: -9037724387597929990
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Block_2
+      name: hit_2
       rect:
         serializedVersion: 2
-        x: 135
+        x: 128
         y: 0
-        width: 56
-        height: 56
+        width: 62
+        height: 47
       alignment: 9
-      pivot: {x: 0.4069201, y: 0.2876258}
+      pivot: {x: 0.3976593, y: 0.4148936}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d89d122752b7e4b47abbc037728d9fc5
-      internalID: -1470946536411257380
+      spriteID: 9e7208f9ed123a848bea223dbc1a0379
+      internalID: 8501104746477335304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hit_3
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 0
+        width: 51
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5660472, y: 0.4148936}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c836f9b4fe87c194a82ad80bf26aef60
+      internalID: 7761068069398732630
       vertices: []
       indices: 
       edges: []
@@ -224,7 +182,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 276ab4e0286edaa448400338efbd8a53
+    spriteID: ec1122290b86a1c48986db2dfe6ef7d3
     internalID: 0
     vertices: []
     indices: 

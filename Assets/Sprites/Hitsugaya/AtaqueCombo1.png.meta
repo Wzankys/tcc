@@ -1,16 +1,25 @@
 fileFormatVersion: 2
-guid: bc46de45952472f42afe3036c1b7da39
+guid: 7b4223266512f0a48bce8e6ffb601b44
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2537882373423050008
-    second: Block_0
+      213: 8959580268068877112
+    second: AtaqueCombo1_0
   - first:
-      213: 2189487477073400709
-    second: Block_1
+      213: -7565334055547009967
+    second: AtaqueCombo1_1
   - first:
-      213: -1470946536411257380
-    second: Block_2
+      213: -1118897089088476012
+    second: AtaqueCombo1_2
+  - first:
+      213: -4873436035448407843
+    second: AtaqueCombo1_3
+  - first:
+      213: 444903512877336244
+    second: AtaqueCombo1_4
+  - first:
+      213: 5994244597190563966
+    second: AtaqueCombo1_5
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -89,134 +98,131 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: tvOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: Lumin
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Block_0
+      name: AtaqueCombo1_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 0
-        width: 60
-        height: 56
+        x: 3
+        y: 1
+        width: 46
+        height: 64
       alignment: 9
-      pivot: {x: 0.4042607, y: 0.2876258}
+      pivot: {x: 0.60729724, y: 0.3182173}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83eb2ff8ccaee5842a133195106e2b0a
-      internalID: 2537882373423050008
+      spriteID: 354838bcf058e314cb5f8aeb8d39339b
+      internalID: 8959580268068877112
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Block_1
+      name: AtaqueCombo1_1
       rect:
         serializedVersion: 2
-        x: 69
-        y: 0
-        width: 45
-        height: 56
+        x: 70
+        y: 1
+        width: 43
+        height: 64
       alignment: 9
-      pivot: {x: 0.4069201, y: 0.2876258}
+      pivot: {x: 0.55739135, y: 0.3292344}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75a4ca4e87c39b84c94256e93f70cf96
-      internalID: 2189487477073400709
+      spriteID: 1718e0c8a59f5f5419924a847944ba4b
+      internalID: -7565334055547009967
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Block_2
+      name: AtaqueCombo1_2
       rect:
         serializedVersion: 2
-        x: 135
-        y: 0
-        width: 56
-        height: 56
+        x: 128
+        y: 1
+        width: 62
+        height: 64
       alignment: 9
-      pivot: {x: 0.4069201, y: 0.2876258}
+      pivot: {x: 0.41, y: 0.3182173}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d89d122752b7e4b47abbc037728d9fc5
-      internalID: -1470946536411257380
+      spriteID: 1e9773b3e32e96d448a3dd60c987c4ba
+      internalID: -1118897089088476012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtaqueCombo1_3
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 1
+        width: 62
+        height: 64
+      alignment: 9
+      pivot: {x: 0.41, y: 0.3182173}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 746860c5de9ce234186871468d368dd5
+      internalID: -4873436035448407843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtaqueCombo1_4
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 1
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.39347363, y: 0.31821728}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 281f089755548a64a98023aa04d96dc9
+      internalID: 444903512877336244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtaqueCombo1_5
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 1
+        width: 44
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5640987, y: 0.3182173}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db7af9c56c6c96c449a807817ea7198e
+      internalID: 5994244597190563966
       vertices: []
       indices: 
       edges: []
@@ -224,7 +230,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 276ab4e0286edaa448400338efbd8a53
+    spriteID: 21b65dfc2e4aafe4aad0a527b52effa2
     internalID: 0
     vertices: []
     indices: 

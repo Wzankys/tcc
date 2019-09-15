@@ -1,16 +1,22 @@
 fileFormatVersion: 2
-guid: bc46de45952472f42afe3036c1b7da39
+guid: aa9b1cd4eeaecb94b82a932e428e8cb2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2537882373423050008
-    second: Block_0
+      213: 2401135711197584893
+    second: Derrota_0
   - first:
-      213: 2189487477073400709
-    second: Block_1
+      213: -6100477060502866924
+    second: Derrota_1
   - first:
-      213: -1470946536411257380
-    second: Block_2
+      213: -3040763633702077399
+    second: Derrota_2
+  - first:
+      213: -4469559408032052304
+    second: Derrota_3
+  - first:
+      213: -4580613044227339228
+    second: Derrota_4
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -89,134 +95,110 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: tvOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: Lumin
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Block_0
+      name: Derrota_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 8
         y: 0
-        width: 60
-        height: 56
+        width: 65
+        height: 43
       alignment: 9
-      pivot: {x: 0.4042607, y: 0.2876258}
+      pivot: {x: 0.47570854, y: 0.3347613}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83eb2ff8ccaee5842a133195106e2b0a
-      internalID: 2537882373423050008
+      spriteID: 7082f44f2fc97cf4b947d1552e55d90f
+      internalID: 2401135711197584893
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Block_1
+      name: Derrota_1
       rect:
         serializedVersion: 2
-        x: 69
+        x: 82
         y: 0
-        width: 45
-        height: 56
+        width: 50
+        height: 43
       alignment: 9
-      pivot: {x: 0.4069201, y: 0.2876258}
+      pivot: {x: 0.59473693, y: 0.3347613}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75a4ca4e87c39b84c94256e93f70cf96
-      internalID: 2189487477073400709
+      spriteID: ac9fc74573aa46246846c885bfd4f586
+      internalID: -6100477060502866924
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Block_2
+      name: Derrota_2
       rect:
         serializedVersion: 2
-        x: 135
+        x: 143
         y: 0
-        width: 56
-        height: 56
+        width: 50
+        height: 43
       alignment: 9
-      pivot: {x: 0.4069201, y: 0.2876258}
+      pivot: {x: 0.5789474, y: 0.2980416}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d89d122752b7e4b47abbc037728d9fc5
-      internalID: -1470946536411257380
+      spriteID: 95df3bc011c279448ad7a3bfd5a16ac6
+      internalID: -3040763633702077399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Derrota_3
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 0
+        width: 50
+        height: 43
+      alignment: 9
+      pivot: {x: 0.61052644, y: 0.3347613}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae248e7e15e460b4ab79feb8efd61236
+      internalID: -4469559408032052304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Derrota_4
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 0
+        width: 49
+        height: 43
+      alignment: 9
+      pivot: {x: 0.52685297, y: 0.3347613}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e080c8282b6a29343a3397213f1e7f4a
+      internalID: -4580613044227339228
       vertices: []
       indices: 
       edges: []
@@ -224,7 +206,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 276ab4e0286edaa448400338efbd8a53
+    spriteID: 431c1607ffd6a4d42800703470cb97e8
     internalID: 0
     vertices: []
     indices: 

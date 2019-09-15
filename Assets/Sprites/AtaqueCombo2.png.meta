@@ -1,16 +1,28 @@
 fileFormatVersion: 2
-guid: bc46de45952472f42afe3036c1b7da39
+guid: 66e337bed2dc97545b044d1d6838043d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2537882373423050008
-    second: Block_0
+      213: -8716278854376233005
+    second: frenteB_0
   - first:
-      213: 2189487477073400709
-    second: Block_1
+      213: 8659145250407932229
+    second: frenteB_1
   - first:
-      213: -1470946536411257380
-    second: Block_2
+      213: -2966619028118724044
+    second: frenteB_2
+  - first:
+      213: 4594134660162489184
+    second: frenteB_3
+  - first:
+      213: -9177686616361785623
+    second: frenteB_4
+  - first:
+      213: 231182924043112741
+    second: frenteB_5
+  - first:
+      213: 6036760791778702873
+    second: frenteB_6
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -89,134 +101,152 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: tvOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: Lumin
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Block_0
+      name: frenteB_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 7
         y: 0
-        width: 60
-        height: 56
+        width: 29
+        height: 80
       alignment: 9
-      pivot: {x: 0.4042607, y: 0.2876258}
+      pivot: {x: 0.18403767, y: 0.2470655}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83eb2ff8ccaee5842a133195106e2b0a
-      internalID: 2537882373423050008
+      spriteID: be31ddfd8f06775418f9ca518bb8cd90
+      internalID: -8716278854376233005
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Block_1
+      name: frenteB_1
       rect:
         serializedVersion: 2
-        x: 69
+        x: 43
         y: 0
-        width: 45
-        height: 56
+        width: 52
+        height: 80
       alignment: 9
-      pivot: {x: 0.4069201, y: 0.2876258}
+      pivot: {x: 0.39309952, y: 0.2470655}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75a4ca4e87c39b84c94256e93f70cf96
-      internalID: 2189487477073400709
+      spriteID: acbde31d2e90b1740b3dab7782cb0e16
+      internalID: 8659145250407932229
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Block_2
+      name: frenteB_2
       rect:
         serializedVersion: 2
-        x: 135
+        x: 104
         y: 0
-        width: 56
-        height: 56
+        width: 72
+        height: 80
       alignment: 9
-      pivot: {x: 0.4069201, y: 0.2876258}
+      pivot: {x: 0.038672976, y: 0.2470655}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d89d122752b7e4b47abbc037728d9fc5
-      internalID: -1470946536411257380
+      spriteID: 11a1a0baa68eec74d817abfd873e20d8
+      internalID: -2966619028118724044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: frenteB_3
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 0
+        width: 62
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5123158, y: 0.2470655}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d39040905f743e74d99a67f8d295f156
+      internalID: 4594134660162489184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: frenteB_4
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 0
+        width: 62
+        height: 80
+      alignment: 9
+      pivot: {x: 0.45073676, y: 0.2470655}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70fcbef71f9a8f744b3875cb0f25a9ee
+      internalID: -9177686616361785623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: frenteB_5
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 0
+        width: 35
+        height: 80
+      alignment: 9
+      pivot: {x: 0.3398795, y: 0.2470655}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 139432ab79068c64c87c8d3c7bf5076c
+      internalID: 231182924043112741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: frenteB_6
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 55
+        height: 80
+      alignment: 9
+      pivot: {x: 0.073314875, y: 0.2470655}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e137083391415f469522a186e060976
+      internalID: 6036760791778702873
       vertices: []
       indices: 
       edges: []
@@ -224,7 +254,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 276ab4e0286edaa448400338efbd8a53
+    spriteID: 74e967f971bebad4f98c8dbbbf55bf45
     internalID: 0
     vertices: []
     indices: 

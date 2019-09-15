@@ -1,0 +1,269 @@
+fileFormatVersion: 2
+guid: 05013d441c9e86c438160ad969c2bdfd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 880014137683734838
+    second: "PoseVit\xF3ria_0"
+  - first:
+      213: 1796776047302892236
+    second: "PoseVit\xF3ria_1"
+  - first:
+      213: 4197251870128793460
+    second: "PoseVit\xF3ria_2"
+  - first:
+      213: -4807535510759341436
+    second: "PoseVit\xF3ria_3"
+  - first:
+      213: 5116771316828709182
+    second: "PoseVit\xF3ria_4"
+  - first:
+      213: 8690281232062732883
+    second: "PoseVit\xF3ria_5"
+  - first:
+      213: 805272433173806416
+    second: "PoseVit\xF3ria_6"
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "PoseVit\xF3ria_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 51
+        height: 80
+      alignment: 9
+      pivot: {x: 0.4261225, y: 0.324457}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ecab35631baac3458700005ae34d440
+      internalID: 880014137683734838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "PoseVit\xF3ria_1"
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 1
+        width: 54
+        height: 80
+      alignment: 9
+      pivot: {x: 0.7981217, y: 0.324457}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c8d8e22613c48f46af2a9e937725df9
+      internalID: 1796776047302892236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "PoseVit\xF3ria_2"
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 2
+        width: 58
+        height: 80
+      alignment: 9
+      pivot: {x: 0.8425232, y: 0.324457}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe2492842d5d87340866a49295ad3ff0
+      internalID: 4197251870128793460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "PoseVit\xF3ria_3"
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 2
+        width: 31
+        height: 80
+      alignment: 9
+      pivot: {x: 0.7320315, y: 0.324457}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e12c5524a43fc842a27c45a379781e2
+      internalID: -4807535510759341436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "PoseVit\xF3ria_4"
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 2
+        width: 53
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5581642, y: 0.324457}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cda5bfdd53e0c24aab80c61f5c4ba83
+      internalID: 5116771316828709182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "PoseVit\xF3ria_5"
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 2
+        width: 52
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5658693, y: 0.324457}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41303af179a996746b37ef4f9b5de3e4
+      internalID: 8690281232062732883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "PoseVit\xF3ria_6"
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 2
+        width: 52
+        height: 80
+      alignment: 9
+      pivot: {x: 0.57245636, y: 0.324457}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fde0c9e204b7c9640ae9a3b029ecdf59
+      internalID: 805272433173806416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 3a7dbe044fff81a4f9c3c7561eada83d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
