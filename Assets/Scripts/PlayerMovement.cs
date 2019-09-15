@@ -67,12 +67,6 @@ public class PlayerMovement : MonoBehaviour
         
         //pega o pulo pro player 1 ou 2
 
-        /*if(Input.GetButtonDown("Jump"))
-        {
-            jump = true;
-            animator.SetBool("isJumping", true);
-        }*/
-        
         if (playerNumber == 1)
         {
             if(Input.GetButtonDown("Jump1"))
@@ -97,56 +91,97 @@ public class PlayerMovement : MonoBehaviour
 
         //pega o dash pro player 1 ou 2
         //player 1
+        
         if (playerNumber == 1)
         {
-            
+            if (Input.GetKeyDown(KeyCode.D))
+            {
+                dire = 2;
+                if (contSeta >= 2 && timeDash > 0 && dire==2)
+                {
+                    rb.AddForce( transform.TransformDirection(Vector2.right)*dashDist,ForceMode2D.Impulse);
+                    animator.SetBool("isDash", true);
+                    contSeta = 0;
+                }
+                else
+                {
+                    timeDash = 0.3f;
+                    contSeta++;
+                }
+            }
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                dire = 1;
+                if (contSeta >= 2 && timeDash > 0&&dire==1)
+                {
+                    rb.velocity =  Vector2.left * dashDist;
+                    animator.SetBool("isDash", true);
+                    contSeta = 0;
+                }
+                else
+                {
+                    timeDash = 0.3f;
+                    contSeta++;
+                }
+            }
+            if (timeDash>0)
+            {
+                timeDash -= 0.9f* Time.deltaTime;
+            }
+            else
+            {
+                timeDash = 0;
+            }
         }
 
+        //player 2
+        
         if (playerNumber == 2)
         {
+            if (Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                dire = 2;
+                if (contSeta >= 2 && timeDash > 0 && dire==2)
+                {
+                    rb.AddForce( transform.TransformDirection(Vector2.right)*dashDist,ForceMode2D.Impulse);
+                    animator.SetBool("isDash", true);
+                    contSeta = 0;
+                }
+                else
+                {
+                    timeDash = 0.3f;
+                    contSeta++;
+                }
+            }
+            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                dire = 1;
+                if (contSeta >= 2 && timeDash > 0&&dire==1)
+                {
+                    rb.velocity =  Vector2.left * dashDist;
+                    animator.SetBool("isDash", true);
+                    contSeta = 0;
+                }
+                else
+                {
+                    timeDash = 0.3f;
+                    contSeta++;
+                }
+            }
+            if (timeDash>0)
+            {
+                timeDash -= 0.9f* Time.deltaTime;
+            }
+            else
+            {
+                timeDash = 0;
+            }
             
         }
 
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            dire = 2;
-            if (contSeta >= 2 && timeDash > 0 && dire==2)
-            {
-                rb.AddForce( transform.TransformDirection(Vector2.right)*dashDist,ForceMode2D.Impulse);
-                animator.SetBool("isDash", true);
-                contSeta = 0;
-            }
-            else
-            {
-                timeDash = 0.3f;
-                contSeta++;
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            dire = 1;
-            if (contSeta >= 2 && timeDash > 0&&dire==1)
-            {
-                rb.velocity =  Vector2.left * dashDist;
-                animator.SetBool("isDash", true);
-                contSeta = 0;
-            }
-            else
-            {
-                timeDash = 0.3f;
-                contSeta++;
-            }
-        }
-        if (timeDash>0)
-        {
-            timeDash -= 0.9f* Time.deltaTime;
-        }
-        else
-        {
-            timeDash = 0;
-        }
+       
         
-        //player 2
+       
    
     }
     /*------------------------------------------------------------------------------------------------------------------------------*/
