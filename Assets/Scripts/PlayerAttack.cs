@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Serialization;
 
 public class PlayerAttack : MonoBehaviour {
+	
 	[FormerlySerializedAs("Stats")] public Stats stats;
 	private Animator animator;
 	private float cooldown;
