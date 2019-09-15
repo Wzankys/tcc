@@ -10,7 +10,14 @@ public class PlayerMovement : MonoBehaviour
     
     public CharacterController2D controller;
     public Animator animator;
+ 
+    /*--------------------------------------------------------------------------------------------------------------------------------*/
     
+    //declaração de numero do player 
+
+    public int playerNumber;
+
+
     /*--------------------------------------------------------------------------------------------------------------------------------*/
 
     //declaracao de variaveis do RB do personagem para movimentacao
@@ -42,9 +49,23 @@ public class PlayerMovement : MonoBehaviour
     
     void Update()
     {
-        horizontalMove = Input.GetAxisRaw("Horizontal")*runSpeed;
-        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+        /*----------------------------------------------------------------------------------------------------------------------------*/
+        //pega o eixo pro player 1 ou 2
+        if (playerNumber == 1)
+        {
+            horizontalMove = Input.GetAxisRaw("Horizontal")*runSpeed;
+            animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+        }
+
+        if (playerNumber == 2)
+        {
+            horizontalMove = Input.GetAxisRaw("Horizontal2")*runSpeed;
+            animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+        }
+        /*------------------------------------------------------------------------------------------------------------------------------*/
         
+        //pega o pulo pro player 1 ou 2
+
         if(Input.GetButtonDown("Jump"))
         {
             jump = true;
@@ -65,6 +86,9 @@ public class PlayerMovement : MonoBehaviour
                 contSeta++;
             }
         }
+        
+        /*------------------------------------------------------------------------------------------------------------------------------*/
+
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             dire = 1;
