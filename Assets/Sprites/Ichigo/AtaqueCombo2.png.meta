@@ -1,34 +1,28 @@
 fileFormatVersion: 2
-guid: 79f7f4820fa178d4b814dc6628537c8b
+guid: 442e1d6ec2ca75243bedc1f156fc5869
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 21300000
-    second: Jump_0
+      213: -4857063858982472128
+    second: AtaqueCombo2_0
   - first:
-      213: 21300002
-    second: Jump_1
+      213: 8075151137643473736
+    second: AtaqueCombo2_1
   - first:
-      213: 21300004
-    second: Jump_2
+      213: -8847911800770368188
+    second: AtaqueCombo2_2
   - first:
-      213: 21300006
-    second: Jump_3
+      213: -3151975508007763101
+    second: AtaqueCombo2_3
   - first:
-      213: 21300008
-    second: Jump_4
+      213: 894224317320079434
+    second: AtaqueCombo2_4
   - first:
-      213: 21300010
-    second: Jump_5
+      213: 6023218174687734725
+    second: AtaqueCombo2_5
   - first:
-      213: 21300012
-    second: Jump_6
-  - first:
-      213: 21300014
-    second: Jump_7
-  - first:
-      213: 21300016
-    second: Jump_8
+      213: -6422175741245436951
+    second: AtaqueCombo2_6
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -107,205 +101,152 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Jump_0
+      name: AtaqueCombo2_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 7
         y: 0
-        width: 56
-        height: 43
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 29
+        height: 80
+      alignment: 9
+      pivot: {x: 0.32885373, y: 0.3043343}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2887c201835dc8c4883f71ebae8380b5
-      internalID: 21300000
+      spriteID: 9e9700d1aad2e8f4c83ea9158f8569f0
+      internalID: -4857063858982472128
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_1
+      name: AtaqueCombo2_1
       rect:
         serializedVersion: 2
-        x: 69
+        x: 44
         y: 0
-        width: 52
-        height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.42364243, y: 0.3043343}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fdf3e7ed4f5881e4589a8105530cb2dc
-      internalID: 21300002
+      spriteID: 13223573402dd8f4f839240060b3ebf9
+      internalID: 8075151137643473736
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_2
+      name: AtaqueCombo2_2
       rect:
         serializedVersion: 2
-        x: 132
+        x: 104
         y: 0
-        width: 52
-        height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 72
+        height: 80
+      alignment: 9
+      pivot: {x: 0.09169907, y: 0.3043343}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed0ba9fc14fd8a241b8963441aaec048
-      internalID: 21300004
+      spriteID: d32d0e4d57b1e8243bd50ee5efc2923a
+      internalID: -8847911800770368188
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_3
+      name: AtaqueCombo2_3
       rect:
         serializedVersion: 2
-        x: 189
-        y: 4
-        width: 52
-        height: 43
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 192
+        y: 0
+        width: 62
+        height: 80
+      alignment: 9
+      pivot: {x: 0.54926324, y: 0.3043343}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 882f451c943792c46b88ad4da9c92135
-      internalID: 21300006
+      spriteID: 21c922f0283ed5945953fcfa8cea4e4b
+      internalID: -3151975508007763101
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_4
+      name: AtaqueCombo2_4
       rect:
         serializedVersion: 2
-        x: 254
+        x: 285
         y: 0
-        width: 52
-        height: 67
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 62
+        height: 80
+      alignment: 9
+      pivot: {x: 0.51847345, y: 0.3043343}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c21a3542593b08409d3314254a0acfa
-      internalID: 21300008
+      spriteID: 8d91f978a84f7d547851fc46fce2f8e5
+      internalID: 894224317320079434
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_5
+      name: AtaqueCombo2_5
       rect:
         serializedVersion: 2
-        x: 314
+        x: 356
         y: 0
-        width: 52
-        height: 66
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 35
+        height: 80
+      alignment: 9
+      pivot: {x: 0.3806449, y: 0.3043343}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36d98d18388dba945a80612a4752aa2f
-      internalID: 21300010
+      spriteID: 4ab9784b2b655cd49acb6a8650b8a264
+      internalID: 6023218174687734725
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_6
+      name: AtaqueCombo2_6
       rect:
         serializedVersion: 2
-        x: 375
+        x: 400
         y: 0
-        width: 63
-        height: 44
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 55
+        height: 80
+      alignment: 9
+      pivot: {x: 0.24876876, y: 0.3043343}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a3c29b4f187a7d4ba1757f1f0cd6514
-      internalID: 21300012
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Jump_7
-      rect:
-        serializedVersion: 2
-        x: 446
-        y: 0
-        width: 63
-        height: 37
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6fafca9d7141065439ba73aafc5876c7
-      internalID: 21300014
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Jump_8
-      rect:
-        serializedVersion: 2
-        x: 515
-        y: 0
-        width: 56
-        height: 43
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a661661669429ef4ea02f2b73e203c08
-      internalID: 21300016
+      spriteID: 9cfae79fd9c08c2478a732d95ddc24dd
+      internalID: -6422175741245436951
       vertices: []
       indices: 
       edges: []
@@ -313,7 +254,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 9ada754002d001843a164aa28319be2c
+    spriteID: 9d27246bdfc97324a97f7918158be58a
     internalID: 0
     vertices: []
     indices: 

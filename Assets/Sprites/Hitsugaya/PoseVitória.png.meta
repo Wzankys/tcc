@@ -1,7 +1,49 @@
 fileFormatVersion: 2
 guid: b10f308767208c943b065199198b1958
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 880014137683734838
+    second: "PoseVit\xF3ria_0"
+  - first:
+      213: 1796776047302892236
+    second: "PoseVit\xF3ria_1"
+  - first:
+      213: 4197251870128793460
+    second: "PoseVit\xF3ria_2"
+  - first:
+      213: -4807535510759341436
+    second: "PoseVit\xF3ria_3"
+  - first:
+      213: 5116771316828709182
+    second: "PoseVit\xF3ria_4"
+  - first:
+      213: 8690281232062732883
+    second: "PoseVit\xF3ria_5"
+  - first:
+      213: 805272433173806416
+    second: "PoseVit\xF3ria_6"
+  - first:
+      213: -5711119647701508289
+    second: "PoseVit\xF3ria_7"
+  - first:
+      213: -5416015746266636009
+    second: "PoseVit\xF3ria_8"
+  - first:
+      213: -3899340497019302000
+    second: "PoseVit\xF3ria_9"
+  - first:
+      213: -4558091748360504445
+    second: "PoseVit\xF3ria_10"
+  - first:
+      213: 2085506628104624626
+    second: "PoseVit\xF3ria_11"
+  - first:
+      213: 8457091420073867759
+    second: "PoseVit\xF3ria_12"
+  - first:
+      213: 6474167161206182815
+    second: "PoseVit\xF3ria_13"
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +82,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -69,9 +111,251 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: "PoseVit\xF3ria_0"
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 0
+        width: 45
+        height: 69
+      alignment: 9
+      pivot: {x: 0.66158915, y: 0.2958181}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38c66658f946fe94b9e40c5acf622999
+      internalID: 880014137683734838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "PoseVit\xF3ria_1"
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 0
+        width: 52
+        height: 69
+      alignment: 9
+      pivot: {x: 0.762194, y: 0.2958181}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17ed761e19bf707448b9c7d24f9ea0ae
+      internalID: 1796776047302892236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "PoseVit\xF3ria_2"
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 0
+        width: 33
+        height: 69
+      alignment: 9
+      pivot: {x: 0.66526145, y: 0.2958181}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0702a70cf7686cb409dcf7e8b445bc58
+      internalID: 4197251870128793460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "PoseVit\xF3ria_3"
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 0
+        width: 31
+        height: 69
+      alignment: 9
+      pivot: {x: 0.7052445, y: 0.2958181}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a85146903287e7b439c9a68eae067f90
+      internalID: -4807535510759341436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "PoseVit\xF3ria_4"
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 0
+        width: 26
+        height: 69
+      alignment: 9
+      pivot: {x: 0.63983685, y: 0.2958181}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d09483efd85f5804d848daa9787abf57
+      internalID: 5116771316828709182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "PoseVit\xF3ria_5"
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 0
+        width: 29
+        height: 70
+      alignment: 9
+      pivot: {x: 0.79775685, y: 0.2958181}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 872a22ba35ed01249b3e59c468923b90
+      internalID: 8690281232062732883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "PoseVit\xF3ria_6"
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 0
+        width: 30
+        height: 69
+      alignment: 9
+      pivot: {x: 0.5757446, y: 0.2958181}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 262703feaf58b264eb5a081ef1b3bd4f
+      internalID: 805272433173806416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "PoseVit\xF3ria_7"
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 0
+        width: 41
+        height: 69
+      alignment: 9
+      pivot: {x: 0.41132337, y: 0.2958181}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d283c8ec2710e84499e5396edc932fa
+      internalID: -5711119647701508289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "PoseVit\xF3ria_8"
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 0
+        width: 44
+        height: 69
+      alignment: 9
+      pivot: {x: 0.37605354, y: 0.2958181}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1015eacf86f409c428ee24c8b1ff9241
+      internalID: -5416015746266636009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "PoseVit\xF3ria_10"
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 0
+        width: 45
+        height: 69
+      alignment: 9
+      pivot: {x: 0.34851074, y: 0.2958181}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4559aea0e182c7429314260cdeb4375
+      internalID: -4558091748360504445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "PoseVit\xF3ria_13"
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 0
+        width: 25
+        height: 70
+      alignment: 9
+      pivot: {x: 0.6817896, y: 0.2958181}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec775f592a866e246a61a4a6e02b8674
+      internalID: 6474167161206182815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
