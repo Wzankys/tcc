@@ -224,7 +224,13 @@ public class PlayerMovement : MonoBehaviour
     //triggers
     void OnTriggerEnter(Collider other)
     {
+        
 
+    }
+    //tomar dano
+    public void applyDamage(float damage)
+    {
+        Debug.Log("Tomei dano:" + playerNumber);
     }
 
     /*-------------------------------------------------------------------------------------------------------------------------------*/
