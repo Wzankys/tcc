@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -33,5 +34,13 @@ public class PlayerAttack : MonoBehaviour {
 		canAttack = false;
 		yield return new WaitForSeconds (attack.atkCooldown);
 		canAttack = true;
+	}
+
+	private void OnCollisionEnter(Collision other)
+	{
+		if (other.gameObject.CompareTag("Player")&&!canAttack)
+		{
+			other.gameObject.GetComponent<PlayerMovement>().applyDamage(20.0f);
+		}
 	}
 }
