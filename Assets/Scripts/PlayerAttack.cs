@@ -17,30 +17,22 @@ public class PlayerAttack : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (!attack) return;
+		//if (!attack) return;
 		Attack ();
 	}
 
-	void Attack () {
-		var axis = Input.GetAxisRaw (attack.keyAxis);
-		if (axis > 0 && canAttack) {
-			Debug.Log ("Teste");
-			animator.SetTrigger (attack.animation);
-			StartCoroutine (CooldownCoroutine ());
+	void Attack () { 
+		if (Input.GetKeyDown(KeyCode.Z)) {
+            animator.SetTrigger("AttackB");
 		}
 	}
 
-	IEnumerator CooldownCoroutine () {
-		canAttack = false;
-		yield return new WaitForSeconds (attack.atkCooldown);
-		canAttack = true;
-	}
-
-	private void OnCollisionEnter(Collision other)
+	private void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.gameObject.CompareTag("Player")&&!canAttack)
+		if (other.gameObject.layer==12)
 		{
-			other.gameObject.GetComponent<PlayerMovement>().applyDamage(20.0f);
+            Debug.Log("deu boa colisao");
 		}
 	}
+  
 }
