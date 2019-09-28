@@ -68,5 +68,10 @@ public class CharacterSelection : MonoBehaviour
             index = characterList.Length - 1;
         }
     }
+
+    private void selectCharacter()
+    {
+        
+    }
     
 }

@@ -19,9 +19,9 @@
       <Path>.idea</Path>
       <Path>.vscode</Path>
       <Path>Library</Path>
+      <Path>Music</Path>
       <Path>Temp</Path>
       <Path>obj</Path>
-      <Path>teste</Path>
     </explicitExcludes>
   </component>
 </project>

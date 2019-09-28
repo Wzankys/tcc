@@ -9,11 +9,14 @@
         <e p="Scripts" t="Include">
           <e p="AttackStats.cs" t="Include" />
           <e p="CharacterController2D.cs" t="Include" />
+          <e p="CharacterSelection.cs" t="Include" />
           <e p="comboSystem.cs" t="Include" />
           <e p="EspecialIchigo.cs" t="Include" />
           <e p="Hitbox.cs" t="Include" />
           <e p="PlayerAttack.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
+          <e p="SelectionInfo.cs" t="Include" />
+          <e p="SelectionSettings.cs" t="Include" />
           <e p="Stats.cs" t="Include" />
         </e>
       </e>
