@@ -8,6 +8,10 @@ public class CharacterSelection : MonoBehaviour
     public int playerNumber;
 
     private int selectionIndex;
+    
+    //private GameObject obj;
+
+    private bool haveInstance = false;
 
     private Object[] characterList;
     
@@ -16,27 +20,25 @@ public class CharacterSelection : MonoBehaviour
         characterList = Resources.LoadAll("Prefabs", typeof(GameObject));
         Debug.Log("Tamanho:"+characterList.Length);
         selectionIndex = 0;
+        _Instantiate();
     }
     
     void Update()
     {
 
-        for (int i = 0; i < 1; i++)
-        {
+        if(!haveInstance)
             _Instantiate();
+        
+        
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            Previous();
+        }
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            Next();
         }
         
-        void OnKeyPressed()
-        {
-            if (Input.GetKey(KeyCode.LeftArrow))
-            {
-                Next();
-            }
-            if (Input.GetKey(KeyCode.RightArrow))
-            {
-                Previous();
-            }
-        }
     }
 
     public void _Instantiate()
@@ -44,12 +46,14 @@ public class CharacterSelection : MonoBehaviour
         GameObject obj = Instantiate(characterList[selectionIndex]) as GameObject;
         obj.transform.position = transform.position;
         Debug.Log("Instanciando:" + obj.name);
+        haveInstance = true;
     }
 
     public void Next()
     {
         selectionIndex++;
         VerifyIndex(ref selectionIndex);
+        haveInstance = false;
         Debug.Log("Index: "+selectionIndex);
     }
 
@@ -57,15 +61,16 @@ public class CharacterSelection : MonoBehaviour
     {
         selectionIndex--;
         VerifyIndex(ref selectionIndex);
+        haveInstance = false;
         Debug.Log("Index: "+selectionIndex);
     }
 
     public void VerifyIndex(ref int index)
     {
-        if (index > characterList.Length - 1) { index = 0; }
+        if (index > characterList.Length ) { index = 0; }
         else if(index < 0)
         {
-            index = characterList.Length - 1;
+            index = characterList.Length ;
         }
     }
 
