@@ -6,7 +6,8 @@ using UnityEngine;
 public class AttackStats : ScriptableObject {
 
 	public float duration;
-	public float atkCooldown;
+	public float cooldown;
+	public float damage;
 	public bool invunerable;
 	public string animation;
 	public string keyAxis;
