@@ -36,4 +36,5 @@ public class Stats : ScriptableObject {
 	public bool IsDead () {
 		return healthPoints <= 0;
 	}
+
 }

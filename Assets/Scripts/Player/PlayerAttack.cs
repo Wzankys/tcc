@@ -7,6 +7,7 @@ public class PlayerAttack : MonoBehaviour {
 	private Animator animator;
 	private float cooldown;
 	private bool canAttack = true;
+	private bool attacking = false;
 	// Start is called before the first frame update
 	void Start () {
 		animator = GetComponent<Animator> ();
@@ -22,12 +23,16 @@ public class PlayerAttack : MonoBehaviour {
 	void Attack () {
 		if (Input.GetButtonDown (attack.keyAxis)) {
 			animator.SetTrigger (attack.animation);
+			attacking = true;		
 		}
+		
 	}
 
 	private void OnTriggerEnter2D (Collider2D other) {
-		if (other.gameObject.layer == LayerMask.NameToLayer (playerStats.GetOpponentId ())) {
+		if (attacking && other.gameObject.layer == LayerMask.NameToLayer (playerStats.GetOpponentId ())) {
+			attacking = false;
 			other.GetComponent<PlayerStats> ().playerStats.TakeDamage (attack.damage);
+			other.GetComponent<Animator>().SetTrigger("LevarDano");
 			Debug.Log ("deu boa colisao " + other.gameObject.layer + " " + LayerMask.NameToLayer (playerStats.GetOpponentId ()));
 		}
 	}
