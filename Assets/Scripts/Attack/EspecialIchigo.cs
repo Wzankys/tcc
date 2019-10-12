@@ -33,6 +33,7 @@ public class EspecialIchigo : MonoBehaviour
     }
     void carregarRea1()
     {
+
         animator.SetBool("AtkEspecial", false);
         animator.SetBool("TrocaEP1", true);
         anim1 =true;    }
@@ -43,6 +44,7 @@ public class EspecialIchigo : MonoBehaviour
     }
     void fimAnim()
     {
+        animator.SetBool("AtkEspecial", false);
         animator.SetBool("TrocaEP2", false);
         timeAnim = 0;
         anim0 = false;
