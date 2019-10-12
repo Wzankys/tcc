@@ -36,4 +36,8 @@ public class PlayerAttack : MonoBehaviour {
 			Debug.Log ("deu boa colisao " + other.gameObject.layer + " " + LayerMask.NameToLayer (playerStats.GetOpponentId ()));
 		}
 	}
+    void AttackOff()
+    {
+        attacking = false;
+    }
 }
