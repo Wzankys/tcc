@@ -128,7 +128,7 @@ TextureImporter:
         width: 50
         height: 43
       alignment: 9
-      pivot: {x: 0.59473693, y: 0.3347613}
+      pivot: {x: 0.7, y: 0.55}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -149,7 +149,7 @@ TextureImporter:
         width: 50
         height: 43
       alignment: 9
-      pivot: {x: 0.5789474, y: 0.2980416}
+      pivot: {x: 0.7, y: 0.55}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -170,7 +170,7 @@ TextureImporter:
         width: 50
         height: 43
       alignment: 9
-      pivot: {x: 0.61052644, y: 0.3347613}
+      pivot: {x: 0.7, y: 0.55}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -186,12 +186,12 @@ TextureImporter:
       name: Derrota_4
       rect:
         serializedVersion: 2
-        x: 265
+        x: 264
         y: 0
         width: 49
         height: 43
       alignment: 9
-      pivot: {x: 0.52685297, y: 0.3347613}
+      pivot: {x: 0.7, y: 0.55}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
