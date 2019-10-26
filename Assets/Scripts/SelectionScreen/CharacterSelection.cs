@@ -24,7 +24,8 @@ public class CharacterSelection : MonoBehaviour
     private Animator animator;
 
     private List<AnimatorOverrideController> charactersList = new List<AnimatorOverrideController>();
-    
+
+    private bool alreadySelected;
     
     void Start()
     { 
@@ -100,7 +101,12 @@ public class CharacterSelection : MonoBehaviour
     
     private void selectCharacter()
     {
+        if(alreadySelected)
+            return;
+
+        alreadySelected = true;
         animator.SetBool("Selected",true);
+        HudManager.Instance.OnPlayerSelected(playerNumber,charactersList[selectionIndex].name);
     }
     
 }
