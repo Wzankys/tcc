@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 
 public class CharacterSelection : MonoBehaviour
@@ -8,88 +9,98 @@ public class CharacterSelection : MonoBehaviour
     public int playerNumber;
 
     private int selectionIndex;
+
+    private float selectionDelay;
+
+    public float delayTime;
     
-    //private GameObject obj;
-    
+    //inputs
+    private string leftButton;
+    private string rightButton;
+    private string selectionButton;
 
     private bool haveInstance = false;
+    
+    private Animator animator;
 
-    private Object[] loadedObjects;
-    private List<GameObject> charactersList;
+    private List<AnimatorOverrideController> charactersList = new List<AnimatorOverrideController>();
     
     
     void Start()
-    {
-        loadedObjects = Resources.LoadAll("LoadScenePrefabs", typeof(GameObject));
-        Debug.Log("Tamanho:"+loadedObjects.Length);
+    { 
+        leftButton = "Left"+playerNumber;
+        rightButton = "Right"+playerNumber;
+        selectionButton = "Selection"+playerNumber;
+        var controllers = Resources.LoadAll("LoadingObjects", typeof(AnimatorOverrideController));
+        Debug.Log("Tamanho:"+controllers.Length);
         selectionIndex = 0;
-        LoadAll();
-        charactersList[selectionIndex].SetActive(true);
+        LoadAll(controllers);
+        animator = GetComponent<Animator>();
+        animator.runtimeAnimatorController = charactersList[selectionIndex];
     }
     
     void Update()
     {
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (selectionDelay < Time.time)
         {
-            Previous();
-        }
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            Next();
+            if (Input.GetButton(leftButton))
+            {
+                selectionDelay = Time.time + delayTime;
+                Previous();
+            }
+
+            if (Input.GetButton(rightButton))
+            {
+                selectionDelay = Time.time + delayTime;
+                Next();
+            }
         }
 
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetButton(selectionButton))
         {
             selectCharacter();
         }
         
     }
 
-    public void LoadAll()
+    public void LoadAll(object[] loadedObjects)
     {
         for (int i = 0; i < loadedObjects.Length; i++)
         {
-            GameObject obj = Instantiate(loadedObjects[i]) as GameObject;
-            obj.transform.position = transform.position;
-            obj.SetActive(false);
-            charactersList.Add(obj);
-            Debug.Log("Instanciando:" + obj.name);
+            charactersList.Add(loadedObjects[i] as AnimatorOverrideController);
         }
         
     }
 
     public void Next()
     {
-        charactersList[selectionIndex].SetActive(false);
         selectionIndex++;
-        charactersList[selectionIndex].SetActive(true);
         VerifyIndex(ref selectionIndex);
+        animator.runtimeAnimatorController = charactersList[selectionIndex];
         haveInstance = false;
         Debug.Log("Index: "+selectionIndex);
     }
 
     public void Previous()
     {
-        charactersList[selectionIndex].SetActive(false);
         selectionIndex--;
-        charactersList[selectionIndex].SetActive(true);
         VerifyIndex(ref selectionIndex);
+        animator.runtimeAnimatorController = charactersList[selectionIndex];
         Debug.Log("Index: "+selectionIndex);
     }
 
     public void VerifyIndex(ref int index)
     {
-        if (index > charactersList.Count ) { index = 0; }
+        if (index >= charactersList.Count ) { index = 0; }
         else if(index < 0)
         {
-            index = charactersList.Count ;
+            index = charactersList.Count - 1;
         }
     }
     
     private void selectCharacter()
     {
-        charactersList[selectionIndex].GetComponent<Animator>().SetBool("Selected",true);
-        
+        animator.SetBool("Selected",true);
     }
     
 }
