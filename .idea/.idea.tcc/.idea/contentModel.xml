@@ -4,20 +4,56 @@
     <e p="C:\Users\User\.Rider2019.1\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\User\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_tcc.-1843654132.00" t="ExcludeRecursive" />
     <e p="F:\Documentos\Faculdade\tcc" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="ErbGameArt" t="Include">
+          <e p="Procedural fire" t="Include">
+            <e p="Shaders" t="Include">
+              <e p="FireSphere.shader" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="RainMaker" t="Include">
+          <e p="Editor" t="Include">
+            <e p="RainMakerEditor.cs" t="Include" />
+          </e>
+          <e p="Prefab" t="Include">
+            <e p="BaseRainScript.cs" t="Include" />
+            <e p="RainCollision.cs" t="Include" />
+            <e p="RainScript.cs" t="Include" />
+            <e p="RainScript2D.cs" t="Include" />
+            <e p="RainShader.shader" t="Include" />
+          </e>
+          <e p="Readme.txt" t="Include" />
+        </e>
         <e p="Scripts" t="Include">
-          <e p="AttackStats.cs" t="Include" />
-          <e p="CharacterController2D.cs" t="Include" />
-          <e p="CharacterSelection.cs" t="Include" />
-          <e p="comboSystem.cs" t="Include" />
-          <e p="EspecialIchigo.cs" t="Include" />
-          <e p="Hitbox.cs" t="Include" />
-          <e p="PlayerAttack.cs" t="Include" />
-          <e p="PlayerMovement.cs" t="Include" />
-          <e p="SelectionInfo.cs" t="Include" />
-          <e p="SelectionSettings.cs" t="Include" />
+          <e p="Ataque1.cs" t="Include" />
+          <e p="Ataque2.cs" t="Include" />
+          <e p="Attack" t="Include">
+            <e p="AttackStats.cs" t="Include" />
+            <e p="comboSystem.cs" t="Include" />
+            <e p="EspecialIchigo.cs" t="Include" />
+            <e p="Hitbox.cs" t="Include" />
+          </e>
+          <e p="GameManager" t="Include">
+            <e p="GameManger.cs" t="Include" />
+          </e>
+          <e p="Player" t="Include">
+            <e p="CharacterController2D.cs" t="Include" />
+            <e p="PlayerAttack.cs" t="Include" />
+            <e p="PlayerMovement.cs" t="Include" />
+            <e p="PlayerStats.cs" t="Include" />
+          </e>
+          <e p="Player1Dmg.cs" t="Include" />
+          <e p="Player2Dmg.cs" t="Include" />
+          <e p="SelectionScreen" t="Include">
+            <e p="CharacterSelection.cs" t="Include" />
+            <e p="SelectionInfo.cs" t="Include" />
+            <e p="SelectionSettings.cs" t="Include" />
+          </e>
           <e p="Stats.cs" t="Include" />
+          <e p="UIManager.cs" t="Include" />
         </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />

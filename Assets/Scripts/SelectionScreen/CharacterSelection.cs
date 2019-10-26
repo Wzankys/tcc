@@ -17,7 +17,7 @@ public class CharacterSelection : MonoBehaviour
     
     void Start()
     {
-        characterList = Resources.LoadAll("Prefabs", typeof(GameObject));
+        characterList = Resources.LoadAll("LoadingData", typeof(GameObject));
         Debug.Log("Tamanho:"+characterList.Length);
         selectionIndex = 0;
         _Instantiate();
