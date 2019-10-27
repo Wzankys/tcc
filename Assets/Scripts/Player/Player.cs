@@ -15,6 +15,7 @@ public class Player : MonoBehaviour {
 	private float horizontalAxis, verticalAxis;
 	private bool isJumping, isGrounded, isFacingRight = true, jump = false;
 	private Vector3 velocity;
+	private int jumpCount = 0;
 	public int ID {
 		get { return playerStats.playerId; }
 	}
@@ -36,8 +37,6 @@ public class Player : MonoBehaviour {
 		Move ();
 	}
 	void OnTakeDamage (Stats playerStats) {
-		Debug.Log ("ON TAKE DAMAGE");
-
 		PlayDamageAnimation ();
 	}
 
@@ -83,11 +82,15 @@ public class Player : MonoBehaviour {
 	}
 
 	void Jump () {
-		if (IsGrounded ()) {
+		if (IsGrounded () && !isJumping) {
 			// Add a vertical force to the player.
 			rb.AddForce (new Vector2 (0f, jumpForce));
 			animator.SetBool ("isJumping", true);
-			Debug.Log ("JUMP");
+			isJumping = true;
+			jumpCount++;
+		} else if (isJumping && jumpCount < 2) {
+			rb.AddForce (new Vector2 (0f, jumpForce));
+			jumpCount++;
 		}
 	}
 	private void Flip () {
@@ -109,6 +112,8 @@ public class Player : MonoBehaviour {
 	private void OnCollisionEnter2D (Collision2D col) {
 		if (col.gameObject.CompareTag ("Ground"))
 			GetComponent<Animator> ().SetBool ("isJumping", false);
+		isJumping = false;
+		jumpCount = 0;
 	}
 
 	/// <summary>
