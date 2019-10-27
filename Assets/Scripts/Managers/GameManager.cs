@@ -15,7 +15,9 @@ public class GameManager : MonoBehaviour {
 	void Start () {
 		background.sprite = _selectionSettings.selectedArena.sprite;
 		foreach (var player in _selectionSettings.selectionInfos) {
+			Debug.Log("Numero de infos: " + _selectionSettings.selectionInfos.Count);
 			Debug.Log ("Player: " + player.selectedCharacter.number);
+			player.selectedCharacter.prefab.GetComponent<Stats>().SetPlayerID(player.selectedCharacter.number);
 			Instantiate (player.selectedCharacter.prefab);
 		}
 	}

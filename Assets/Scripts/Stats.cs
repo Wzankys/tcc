@@ -26,6 +26,11 @@ public class Stats : MonoBehaviour {
 		return GetName (opponentId);
 	}
 
+	public void SetPlayerID(int id)
+	{
+		playerId = id;
+	}
+
 	public string GetName (int id) {
 		return "Player" + id;
 	}
