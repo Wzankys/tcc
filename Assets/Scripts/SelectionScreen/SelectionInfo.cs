@@ -10,7 +10,7 @@ public struct SelectionInfo
 [System.Serializable]
 public struct SelectedCharacter
 {
-    public string name;
+    public GameObject prefab;    
     public int number;
 }
 

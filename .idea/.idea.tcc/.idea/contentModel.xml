@@ -50,6 +50,7 @@
           <e p="Player2Dmg.cs" t="Include" />
           <e p="SelectionScreen" t="Include">
             <e p="ArenaSelection.cs" t="Include" />
+            <e p="CharacterInfo.cs" t="Include" />
             <e p="CharacterSelection.cs" t="Include" />
             <e p="SelectionInfo.cs" t="Include" />
             <e p="SelectionSettings.cs" t="Include" />

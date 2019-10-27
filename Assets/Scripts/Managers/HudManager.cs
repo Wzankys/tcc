@@ -19,14 +19,14 @@ public class HudManager : Singleton<HudManager>
         arena.enabled = false;
     }
     
-    public void OnPlayerSelected(int playerNumber, string selectedName)
+    public void OnPlayerSelected(int playerNumber, GameObject prefab)
     {
         remainingPlayers--;
         
         if (remainingPlayers > 0)
         {
             SelectionInfo selected = new SelectionInfo();
-            selected.selectedCharacter.name = selectedName;
+            selected.selectedCharacter.prefab = prefab;
             selected.selectedCharacter.number = playerNumber;
             settings.selectionInfos.Add(selected);
         }

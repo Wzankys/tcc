@@ -23,7 +23,7 @@ public class CharacterSelection : MonoBehaviour
     
     private Animator animator;
 
-    private List<AnimatorOverrideController> charactersList = new List<AnimatorOverrideController>();
+    private List<CharacterInfo> charactersList = new List<CharacterInfo>();
 
     private bool alreadySelected;
     
@@ -32,12 +32,12 @@ public class CharacterSelection : MonoBehaviour
         leftButton = "Left"+playerNumber;
         rightButton = "Right"+playerNumber;
         selectionButton = "Selection"+playerNumber;
-        var controllers = Resources.LoadAll("LoadingObjects", typeof(AnimatorOverrideController));
+        var controllers = Resources.LoadAll("Characters", typeof(CharacterInfo));
         Debug.Log("Tamanho:"+controllers.Length);
         selectionIndex = 0;
         LoadAll(controllers);
         animator = GetComponent<Animator>();
-        animator.runtimeAnimatorController = charactersList[selectionIndex];
+        animator.runtimeAnimatorController = charactersList[selectionIndex].loadingAnimationController;
     }
     
     void Update()
@@ -68,7 +68,7 @@ public class CharacterSelection : MonoBehaviour
     {
         for (int i = 0; i < loadedObjects.Length; i++)
         {
-            charactersList.Add(loadedObjects[i] as AnimatorOverrideController);
+            charactersList.Add(loadedObjects[i] as CharacterInfo);
         }
         
     }
@@ -77,7 +77,7 @@ public class CharacterSelection : MonoBehaviour
     {
         selectionIndex++;
         VerifyIndex(ref selectionIndex);
-        animator.runtimeAnimatorController = charactersList[selectionIndex];
+        animator.runtimeAnimatorController = charactersList[selectionIndex].loadingAnimationController;
         haveInstance = false;
         Debug.Log("Index: "+selectionIndex);
     }
@@ -86,7 +86,7 @@ public class CharacterSelection : MonoBehaviour
     {
         selectionIndex--;
         VerifyIndex(ref selectionIndex);
-        animator.runtimeAnimatorController = charactersList[selectionIndex];
+        animator.runtimeAnimatorController = charactersList[selectionIndex].loadingAnimationController;
         Debug.Log("Index: "+selectionIndex);
     }
 
@@ -106,7 +106,7 @@ public class CharacterSelection : MonoBehaviour
 
         alreadySelected = true;
         animator.SetBool("Selected",true);
-        HudManager.Instance.OnPlayerSelected(playerNumber,charactersList[selectionIndex].name);
+        HudManager.Instance.OnPlayerSelected(playerNumber,charactersList[selectionIndex].prefab);
     }
     
 }

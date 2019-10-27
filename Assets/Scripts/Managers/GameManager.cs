@@ -17,6 +17,10 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         background.sprite = _selectionSettings.selectedArena.sprite;
+        foreach (var player in _selectionSettings.selectionInfos)
+        {
+            Instantiate(player.selectedCharacter.prefab);
+        }
     }
 
     void Update()
