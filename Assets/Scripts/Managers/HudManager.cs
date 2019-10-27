@@ -18,9 +18,10 @@ public class HudManager : Singleton<HudManager> {
 	}
 
 	public void OnPlayerSelected (int playerNumber, GameObject prefab) {
+		
 		remainingPlayers--;
 
-		if (remainingPlayers >= 0) {
+		if (remainingPlayers > 0) {
 			SelectionInfo selected = new SelectionInfo ();
 			selected.selectedCharacter.prefab = prefab;
 			selected.selectedCharacter.number = playerNumber;

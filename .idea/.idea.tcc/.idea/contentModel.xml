@@ -42,6 +42,7 @@
           </e>
           <e p="Player" t="Include">
             <e p="CharacterController2D.cs" t="Include" />
+            <e p="Player.cs" t="Include" />
             <e p="PlayerAttack.cs" t="Include" />
             <e p="PlayerMovement.cs" t="Include" />
             <e p="PlayerStats.cs" t="Include" />
@@ -58,6 +59,7 @@
           <e p="Singleton.cs" t="Include" />
           <e p="Stats.cs" t="Include" />
           <e p="UIManager.cs" t="Include" />
+          <e p="Utils.cs" t="Include" />
         </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />
