@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SelectionSettings 
-{
-    public  List<SelectionInfo> selectionInfos = new List<SelectionInfo>();
-    public  SelectedArena selectedArena;
+public class SelectionSettings {
+	public List<SelectionInfo> selectionInfos = new List<SelectionInfo> ();
+	public SelectedArena selectedArena;
 }
-

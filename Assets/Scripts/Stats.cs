@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu (fileName = "Stats", menuName = "Stats/Stats", order = 1)]
-public class Stats : ScriptableObject {
+public class Stats : MonoBehaviour {
 	public int playerId;
 	public float healthPoints = 100.0f;
 	public float maxHealthPoints = 100.0f;
@@ -16,6 +15,9 @@ public class Stats : ScriptableObject {
 
 	public float damage;
 	public float magicalDamage;
+	public delegate void StatskHandler (Stats stats);
+	public StatskHandler OnTakeDamage;
+	public StatskHandler OnPlayerDeath;
 	public string GetPlayerIdName () {
 		return GetName (playerId);
 	}
@@ -31,10 +33,17 @@ public class Stats : ScriptableObject {
 	public void TakeDamage (float damage) {
 		healthPoints -= damage;
 		Debug.Log (GetPlayerIdName () + " took " + damage + " damage");
+		SafelyCallOnTakeDamage ();
 	}
 
 	public bool IsDead () {
 		return healthPoints <= 0;
+	}
+
+	public void SafelyCallOnTakeDamage () {
+		if (OnTakeDamage != null) {
+			OnTakeDamage (this);
+		}
 	}
 
 }

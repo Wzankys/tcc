@@ -3,34 +3,52 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIManager : MonoBehaviour
-{
-    public Slider hpUI;
-    public Slider hpUI2;
-    public Image playerImg, playerImg2;
+public class UIManager : MonoBehaviour {
+	public Slider hpUI;
+	public Slider hpUI2;
+	public Image playerImg, playerImg2;
 
-    private Player1Dmg pDmg;
-    private Player2Dmg pDmg2;
+	public Stats[] stats;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        pDmg = FindObjectOfType<Player1Dmg>();
-        pDmg2 = FindObjectOfType<Player2Dmg>();
+	// Start is called before the first frame update
+	void Start () {
+		SetupStats ();
+		OrderStats ();
+		SetupHealthBar ();
+	}
+	private void SetupStats () {
+		stats = FindObjectsOfType<Stats> ();
+		foreach (var stat in stats) {
+			stat.OnTakeDamage += OnPlayerTakeDamage;
+		}
+	}
+	private void OrderStats () {
+		if (stats[0].playerId != 1) {
+			Stats player1Stats = stats[1];
+			stats[1] = stats[0];
+			stats[0] = player1Stats;
+		}
+	}
 
-        hpUI.maxValue = pDmg.MaxHP;
-        hpUI.value = hpUI.maxValue;
+	public void OnPlayerTakeDamage (Stats playerStats) {
+		Slider playerBar = playerStats.playerId == 1 ? hpUI : hpUI2;
+		UpdateHP (playerBar, (int) playerStats.healthPoints);
+	}
 
-        hpUI2.maxValue = pDmg2.MaxHP;
-        hpUI2.value = hpUI2.maxValue;
-    }
+	public void SetupHealthBar () {
+		hpUI.maxValue = stats[0].maxHealthPoints;
+		hpUI.value = hpUI.maxValue;
 
-    public void UpdateHP1(int qntd)
-    {
-        hpUI.value = qntd;
-    }
-    public void UpdateHP2(int qntd)
-    {
-        hpUI2.value = qntd;
-    }
+		hpUI2.maxValue = stats[1].maxHealthPoints;
+		hpUI2.value = hpUI2.maxValue;
+	}
+	public void UpdateHP (Slider bar, int value) {
+		bar.value = value;
+	}
+	public void UpdateHP1 (int qntd) {
+		hpUI.value = qntd;
+	}
+	public void UpdateHP2 (int qntd) {
+		hpUI2.value = qntd;
+	}
 }
