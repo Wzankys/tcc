@@ -21,6 +21,7 @@ public class PlayerAttack : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		//if (!attack) return;
+		if (!GameManager.Instance.CompareState (GameState.GAME)) return;
 		Attack ();
 	}
 

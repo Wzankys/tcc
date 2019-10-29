@@ -31,7 +31,7 @@ public class Player : MonoBehaviour {
 	}
 
 	void Update () {
-		if (GameManager.Instance.gameState != GameState.GAME) return;
+		if (!GameManager.Instance.CompareState (GameState.GAME)) return;
 		GetInput ();
 		UpdateAnimations ();
 	}

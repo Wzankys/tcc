@@ -43,6 +43,10 @@ public class GameManager : Singleton<GameManager> {
 		yield return new WaitForSeconds (3);
 		Show (_selectionSettings);
 	}
+
+	public bool CompareState (GameState state) {
+		return state == gameState;
+	}
 	void Update () {
 
 	}
