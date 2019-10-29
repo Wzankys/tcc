@@ -63,7 +63,7 @@ public class Player : MonoBehaviour {
 	void GetInput () {
 		horizontalAxis = Input.GetAxisRaw ("Horizontal" + ID) * speed;
 		JumpInput ();
-		//DashInput ();
+		DashInput ();
 	}
 
 	void JumpInput () {
@@ -77,8 +77,8 @@ public class Player : MonoBehaviour {
 		}
 	}
 	void Dash () {
-		rb.AddForce (transform.TransformDirection (Vector2.right) * dashForce, ForceMode2D.Impulse);
-		animator.SetBool ("isDash", true);
+		rb.AddForce (transform.TransformDirection (Vector2.right) * FacingDirection () * dashForce, ForceMode2D.Impulse);
+		// animator.SetBool ("isDash", true);
 		print ("DASH");
 	}
 
@@ -147,5 +147,9 @@ public class Player : MonoBehaviour {
 			Gizmos.color = Color.green;
 		} else Gizmos.color = Color.red;
 		Gizmos.DrawLine (transform.position, transform.position + Vector3.down * groundeCheckerOffset);
+	}
+
+	float FacingDirection () {
+		return Mathf.Clamp (transform.localScale.x, -1, 1);
 	}
 }
