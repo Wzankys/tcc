@@ -36,9 +36,11 @@
             <e p="EspecialIchigo.cs" t="Include" />
             <e p="Hitbox.cs" t="Include" />
           </e>
+          <e p="GameState.cs" t="Include" />
           <e p="Managers" t="Include">
             <e p="GameManager.cs" t="Include" />
             <e p="HudManager.cs" t="Include" />
+            <e p="MenuManager.cs" t="Include" />
           </e>
           <e p="Player" t="Include">
             <e p="CharacterController2D.cs" t="Include" />

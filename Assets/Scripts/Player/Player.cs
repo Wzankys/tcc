@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour {
 	public Stats playerStats;
 	[Header ("Movement Settings")]
-	public float knockbackForce = 5;
+	public float knockbackForce = 8;
 	public float jumpForce = 400f;
 	public float speed;
 	public float groundeCheckerOffset = 1.5f;
