@@ -9,6 +9,7 @@ public class Player : MonoBehaviour {
 	public float jumpForce = 400f;
 	public float speed;
 	public float groundeCheckerOffset = 1.5f;
+	public float dashForce = 200;
 	[Range (0, .3f)] public float m_MovementSmoothing = .05f;
 	private Rigidbody2D rb;
 	private Animator animator;
@@ -53,10 +54,24 @@ public class Player : MonoBehaviour {
 
 	void GetInput () {
 		horizontalAxis = Input.GetAxisRaw ("Horizontal" + ID) * speed;
+		JumpInput ();
+		//DashInput ();
+	}
+
+	void JumpInput () {
 		if (Input.GetButtonDown ("Jump" + ID)) {
 			Jump ();
 		}
-
+	}
+	void DashInput () {
+		if (Input.GetButtonDown ("Dash" + ID)) {
+			Dash ();
+		}
+	}
+	void Dash () {
+		rb.AddForce (transform.TransformDirection (Vector2.right) * dashForce, ForceMode2D.Impulse);
+		animator.SetBool ("isDash", true);
+		print ("DASH");
 	}
 
 	void UpdateAnimations () {

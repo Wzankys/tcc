@@ -15,10 +15,17 @@ public class GameManager : MonoBehaviour {
 	void Start () {
 		background.sprite = _selectionSettings.selectedArena.sprite;
 		foreach (var player in _selectionSettings.selectionInfos) {
-			Debug.Log("Numero de infos: " + _selectionSettings.selectionInfos.Count);
+			Debug.Log ("Numero de infos: " + _selectionSettings.selectionInfos.Count);
 			Debug.Log ("Player: " + player.selectedCharacter.number);
-			player.selectedCharacter.prefab.GetComponent<Stats>().SetPlayerID(player.selectedCharacter.number);
-			Instantiate (player.selectedCharacter.prefab);
+			player.selectedCharacter.prefab.GetComponent<Stats> ().SetPlayerID (player.selectedCharacter.number);
+			GameObject playerObject = Instantiate (player.selectedCharacter.prefab);
+			playerObject.layer = LayerMask.NameToLayer ("Player" + player.selectedCharacter.number);
+			playerObject.GetComponentInChildren<BoxCollider2D> (true).gameObject.layer = LayerMask.NameToLayer ("Player" + player.selectedCharacter.number + "Hit");
+			if (player.selectedCharacter.number == 1) {
+				playerObject.transform.position = new Vector2 (-54, -36);
+			} else if (player.selectedCharacter.number == 2) {
+				playerObject.transform.position = new Vector2 (-24, -36);
+			}
 		}
 	}
 
