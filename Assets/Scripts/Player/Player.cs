@@ -21,15 +21,17 @@ public class Player : MonoBehaviour {
 		get { return playerStats.playerId; }
 	}
 
-	void Start () {
+	void Awake () {
 		rb = GetComponent<Rigidbody2D> ();
 		playerStats = GetComponent<Stats> ();
 		animator = GetComponent<Animator> ();
 		playerStats.OnTakeDamage += OnTakeDamage;
+		playerStats.OnPlayerDeath += OnPlayerDeath;
 		isFacingRight = true;
 	}
 
 	void Update () {
+		if (GameManager.Instance.gameState != GameState.GAME) return;
 		GetInput ();
 		UpdateAnimations ();
 	}
@@ -39,6 +41,9 @@ public class Player : MonoBehaviour {
 	}
 	void OnTakeDamage (Stats playerStats) {
 		PlayDamageAnimation ();
+	}
+	void OnPlayerDeath (Stats playerStats) {
+		PlayDeathAnimation ();
 	}
 
 	float GetPlayerDirection () {
@@ -50,6 +55,9 @@ public class Player : MonoBehaviour {
 	}
 	void PlayDamageAnimation () {
 		animator.SetTrigger ("LevarDano");
+	}
+	void PlayDeathAnimation () {
+		animator.SetTrigger ("MorteP1");
 	}
 
 	void GetInput () {

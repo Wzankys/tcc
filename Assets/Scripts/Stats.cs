@@ -26,8 +26,7 @@ public class Stats : MonoBehaviour {
 		return GetName (opponentId);
 	}
 
-	public void SetPlayerID(int id)
-	{
+	public void SetPlayerID (int id) {
 		playerId = id;
 	}
 
@@ -39,6 +38,9 @@ public class Stats : MonoBehaviour {
 		healthPoints -= damage;
 		Debug.Log (GetPlayerIdName () + " took " + damage + " damage");
 		SafelyCallOnTakeDamage ();
+		if (healthPoints <= 0) {
+			SafelyCallOnPlayerDeath ();
+		}
 	}
 
 	public bool IsDead () {
@@ -48,6 +50,11 @@ public class Stats : MonoBehaviour {
 	public void SafelyCallOnTakeDamage () {
 		if (OnTakeDamage != null) {
 			OnTakeDamage (this);
+		}
+	}
+	public void SafelyCallOnPlayerDeath () {
+		if (OnPlayerDeath != null) {
+			OnPlayerDeath (this);
 		}
 	}
 
