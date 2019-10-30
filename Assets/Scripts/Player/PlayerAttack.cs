@@ -12,15 +12,18 @@ public class PlayerAttack : MonoBehaviour {
 	private float cooldown;
 	private bool canAttack = true;
 	private bool attacking = false;
+    private Player player;
 	// Start is called before the first frame update
 	void Start () {
 		animator = GetComponent<Animator> ();
 		playerStats = GetComponent<Stats> ();
+        player = GetComponent<Player>();
 	}
 
 	// Update is called once per frame
 	void Update () {
 		//if (!attack) return;
+		if (!GameManager.Instance.CompareState (GameState.GAME)) return;
 		Attack ();
 	}
 
@@ -44,12 +47,13 @@ public class PlayerAttack : MonoBehaviour {
 		if (attacking && other.gameObject.layer == LayerMask.NameToLayer (playerStats.GetOpponentId ())) {
 			attacking = false;
 			DealDamage (other.gameObject);
-			Debug.Log ("deu boa colisao " + other.gameObject.layer + " " + LayerMask.NameToLayer (playerStats.GetOpponentId ()));
+            Debug.Log ("deu boa colisao " + other.gameObject.layer + " " + LayerMask.NameToLayer (playerStats.GetOpponentId ()));
 		}
 	}
 	public void DealDamage (GameObject enemy) {
 		Stats enemyStats = enemy.GetComponent<Stats> ();
-		enemyStats.TakeDamage (attack.damage);
+        Debug.Log("Player " + player);
+        enemyStats.TakeDamage(attack.damage, player);
 		SafelyCallOnAttack (playerStats, enemyStats);
 	}
 

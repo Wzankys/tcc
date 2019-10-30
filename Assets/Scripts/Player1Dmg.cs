@@ -30,7 +30,7 @@ public class Player1Dmg : MonoBehaviour
             }
             if (currentHP <= 0)
             {
-                Debug.Log("Entrou");
+                //Debug.Log("Entrou");
                 plm.isDead1 = true;
                 currentHP = 0;
                 plm.GetComponent<Animator>().SetBool("MorteP1", true);

@@ -16,7 +16,8 @@ public class Stats : MonoBehaviour {
 	public float damage;
 	public float magicalDamage;
 	public delegate void StatskHandler (Stats stats);
-	public StatskHandler OnTakeDamage;
+    public delegate void AttackHandler(Stats stats,Player enemy);
+    public AttackHandler OnTakeDamage;
 	public StatskHandler OnPlayerDeath;
 	public string GetPlayerIdName () {
 		return GetName (playerId);
@@ -26,8 +27,7 @@ public class Stats : MonoBehaviour {
 		return GetName (opponentId);
 	}
 
-	public void SetPlayerID(int id)
-	{
+	public void SetPlayerID (int id) {
 		playerId = id;
 	}
 
@@ -35,19 +35,29 @@ public class Stats : MonoBehaviour {
 		return "Player" + id;
 	}
 
-	public void TakeDamage (float damage) {
+	public void TakeDamage (float damage,Player enemy) {
 		healthPoints -= damage;
-		Debug.Log (GetPlayerIdName () + " took " + damage + " damage");
-		SafelyCallOnTakeDamage ();
+        Debug.Log("TAKE DAMAGE " + enemy);
+        //Debug.Log (GetPlayerIdName () + " took " + damage + " damage");
+        SafelyCallOnTakeDamage (enemy);
+		if (healthPoints <= 0) {
+			SafelyCallOnPlayerDeath ();
+		}
 	}
 
 	public bool IsDead () {
 		return healthPoints <= 0;
 	}
 
-	public void SafelyCallOnTakeDamage () {
+	public void SafelyCallOnTakeDamage (Player enemy) {
 		if (OnTakeDamage != null) {
-			OnTakeDamage (this);
+            Debug.Log("Enemy " + enemy);
+			OnTakeDamage (this,enemy);
+        }
+	}
+	public void SafelyCallOnPlayerDeath () {
+		if (OnPlayerDeath != null) {
+			OnPlayerDeath (this);
 		}
 	}
 

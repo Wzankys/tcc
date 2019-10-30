@@ -25,8 +25,8 @@ public class HudManager : Singleton<HudManager> {
         selected.selectedCharacter.number = playerNumber;
         settings.selectionInfos.Add (selected);
         remainingPlayers--;
-        Debug.Log("Remaining PLayers: " + remainingPlayers);
-        Debug.Log("Inseri:" + playerNumber);
+        //Debug.Log("Remaining PLayers: " + remainingPlayers);
+        //Debug.Log("Inseri:" + playerNumber);
 			
         if(remainingPlayers <= 0) {
             players.ForEach ((player) => player.enabled = false);
@@ -36,7 +36,7 @@ public class HudManager : Singleton<HudManager> {
 
     public void OnSelectedArena (Sprite selection) {
         settings.selectedArena.sprite = selection;
-        Debug.Log("Tamanho do array sendo passado pra proxima cena: " + settings.selectionInfos.Count);
+        //Debug.Log("Tamanho do array sendo passado pra proxima cena: " + settings.selectionInfos.Count);
         GameManager.Show (settings);
     }
 

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Animations;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterSelection : MonoBehaviour
@@ -33,7 +31,7 @@ public class CharacterSelection : MonoBehaviour
         rightButton = "Right"+playerNumber;
         selectionButton = "Selection"+playerNumber;
         var controllers = Resources.LoadAll("Characters", typeof(CharacterInfo));
-        Debug.Log("Tamanho:"+controllers.Length);
+        //Debug.Log("Tamanho:"+controllers.Length);
         selectionIndex = 0;
         LoadAll(controllers);
         animator = GetComponent<Animator>();
@@ -79,7 +77,7 @@ public class CharacterSelection : MonoBehaviour
         VerifyIndex(ref selectionIndex);
         animator.runtimeAnimatorController = charactersList[selectionIndex].loadingAnimationController;
         haveInstance = false;
-        Debug.Log("Index: "+selectionIndex);
+        //Debug.Log("Index: "+selectionIndex);
     }
 
     public void Previous()
@@ -87,7 +85,7 @@ public class CharacterSelection : MonoBehaviour
         selectionIndex--;
         VerifyIndex(ref selectionIndex);
         animator.runtimeAnimatorController = charactersList[selectionIndex].loadingAnimationController;
-        Debug.Log("Index: "+selectionIndex);
+        //Debug.Log("Index: "+selectionIndex);
     }
 
     public void VerifyIndex(ref int index)

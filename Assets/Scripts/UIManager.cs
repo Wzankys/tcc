@@ -30,7 +30,7 @@ public class UIManager : MonoBehaviour {
 		}
 	}
 
-	public void OnPlayerTakeDamage (Stats playerStats) {
+	public void OnPlayerTakeDamage (Stats playerStats,Player enemy) {
 		Slider playerBar = playerStats.playerId == 1 ? hpUI : hpUI2;
 		UpdateHP (playerBar, (int) playerStats.healthPoints);
 	}

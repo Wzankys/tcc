@@ -111,6 +111,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.D))
                 {
+                    Debug.Log("dash");
                     dire = 2;
                     if (contSeta >= 2 && timeDash > 0 && dire == 2)
                     {
