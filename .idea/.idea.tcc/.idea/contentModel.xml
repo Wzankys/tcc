@@ -38,9 +38,11 @@
           </e>
           <e p="GameState.cs" t="Include" />
           <e p="Managers" t="Include">
+            <e p="AudioManager.cs" t="Include" />
             <e p="GameManager.cs" t="Include" />
             <e p="HudManager.cs" t="Include" />
             <e p="MenuManager.cs" t="Include" />
+            <e p="MusicManager.cs" t="Include" />
           </e>
           <e p="Player" t="Include">
             <e p="AudioList.cs" t="Include" />
