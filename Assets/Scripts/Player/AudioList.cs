@@ -16,43 +16,43 @@ public class AudioList : MonoBehaviour
         audioS.clip = clip;
         audioS.Play();
     }
-    void jumpSound()
+    public void jumpSound()
     {
         PlaySong(sJump);
     }
-    void selectSound()
+    public void selectSound()
     {
         PlaySong(sSelect);
     }
-    void attack1Sound()
+    public void attack1Sound()
     {
         PlaySong(sAttack1);
     }
-    void attack2Sound()
+    public void attack2Sound()
     {
         PlaySong(sAttack2);
     }
-    void attack3Sound()
+    public void attack3Sound()
     {
         PlaySong(sAttack3);
     }
-    void hitSound()
+    public void hitSound()
     {
         PlaySong(sHit1);
     }
-    void deathSound()
+    public void deathSound()
     {
         PlaySong(sDeath);
     }
-    void winSound()
+    public void winSound()
     {
         PlaySong(sWin);
     }
-    void presentationSound()
+    public void presentationSound()
     {
         PlaySong(sPresentation);
     }
-    void dashSound()
+    public void dashSound()
     {
         PlaySong(sDash);
     }

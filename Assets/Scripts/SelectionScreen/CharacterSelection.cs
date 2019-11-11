@@ -21,6 +21,8 @@ public class CharacterSelection : MonoBehaviour
     
     private Animator animator;
 
+    private AudioSource audioSource;
+
     private List<CharacterInfo> charactersList = new List<CharacterInfo>();
 
     private bool alreadySelected;
@@ -35,6 +37,7 @@ public class CharacterSelection : MonoBehaviour
         selectionIndex = 0;
         LoadAll(controllers);
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
         animator.runtimeAnimatorController = charactersList[selectionIndex].loadingAnimationController;
     }
     
@@ -104,6 +107,8 @@ public class CharacterSelection : MonoBehaviour
 
         alreadySelected = true;
         animator.SetBool("Selected",true);
+        audioSource.clip = charactersList[selectionIndex].prefab.GetComponent<AudioList>().sSelect;
+        audioSource.Play();
         HudManager.Instance.OnPlayerSelected(playerNumber,charactersList[selectionIndex].prefab);
     }
     
