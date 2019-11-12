@@ -13,6 +13,11 @@ public class ArenaSelection : MonoBehaviour {
 	private string Name;
 	private Text textBox;
 
+	private AudioSource audioSource;
+
+	public AudioClip select;
+	public AudioClip selected;
+
 	//inputs
 	private string leftButton;
 	private string rightButton;
@@ -28,6 +33,7 @@ public class ArenaSelection : MonoBehaviour {
 		rightButton = "Right2";
 		selectionButton = "Selection1";
 		textBox = GetComponentInChildren<Text>();
+		audioSource = GetComponent<AudioSource>();
 		var scenarios = Resources.LoadAll ("Scenarios", typeof (Sprite));
 		Debug.Log ("Tamanho:" + scenarios.Length);
 		image = GetComponent<Image> ();
@@ -42,12 +48,17 @@ public class ArenaSelection : MonoBehaviour {
 		textBox.text = arenaList[selectionIndex].name.ToUpper();
 
 		if (selectionDelay < Time.time) {
-			if (Input.GetButton (leftButton)) {
+			if (Input.GetButton (leftButton))
+			{
+				audioSource.clip = @select;
+				audioSource.Play();
 				selectionDelay = Time.time + delayTime;
 				Previous ();
 			}
 
 			if (Input.GetButton (rightButton)) {
+				audioSource.clip = @select;
+				audioSource.Play();
 				selectionDelay = Time.time + delayTime;
 				Next ();
 			}
@@ -55,6 +66,7 @@ public class ArenaSelection : MonoBehaviour {
 
 		if (Input.GetButtonDown (selectionButton)) {
 			print ("AAAAAAA");
+			StartCoroutine(selectedArenaDelay());
 			selectArena ();
 		}
 
@@ -85,6 +97,13 @@ public class ArenaSelection : MonoBehaviour {
 		if (index >= arenaList.Count) { index = 0; } else if (index < 0) {
 			index = arenaList.Count - 1;
 		}
+	}
+
+	IEnumerator selectedArenaDelay()
+	{
+		audioSource.clip = @selected;
+		audioSource.Play();
+		yield return new WaitForSeconds(selected.length);
 	}
 
 	private void selectArena () {
