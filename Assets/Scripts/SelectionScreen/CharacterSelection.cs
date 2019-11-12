@@ -6,6 +6,7 @@ public class CharacterSelection : MonoBehaviour
 {
 
     public int playerNumber;
+    public Image splashArt;
     private string Name;
     private Text textBox;
 
@@ -43,11 +44,13 @@ public class CharacterSelection : MonoBehaviour
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
         animator.runtimeAnimatorController = charactersList[selectionIndex].loadingAnimationController;
+        splashArt.sprite = charactersList[selectionIndex].splashArt;
     }
     
     void Update()
     {
         textBox.text = charactersList[selectionIndex].name.ToUpper();
+        splashArt.sprite = charactersList[selectionIndex].splashArt;
         //Debug.Log(charactersList[selectionIndex].name);
         if (selectionDelay < Time.time)
         {
@@ -105,6 +108,7 @@ public class CharacterSelection : MonoBehaviour
             index = charactersList.Count - 1;
         }
     }
+    
     
     private void selectCharacter()
     {

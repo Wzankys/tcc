@@ -4,7 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class ArenaSelection : MonoBehaviour {
+	
 	private int selectionIndex;
+	private int previousIndex;
+	private int nextIndex;
 
 	private float selectionDelay;
 
@@ -26,6 +29,15 @@ public class ArenaSelection : MonoBehaviour {
 	private List<Sprite> arenaList = new List<Sprite> ();
 
 	private Image image;
+	private GameObject projectionObject;
+	private Image projectionImage;
+	
+	public GameObject nextProjectionObject;
+	private Image nextProjectionImage;
+
+	public GameObject previousProjectionObject;
+	private Image previousProjectionImage;
+
 
 	// Start is called before the first frame update
 	void Start () {
@@ -34,18 +46,32 @@ public class ArenaSelection : MonoBehaviour {
 		selectionButton = "Selection1";
 		textBox = GetComponentInChildren<Text>();
 		audioSource = GetComponent<AudioSource>();
+		projectionObject = GameObject.FindGameObjectWithTag("Arena Projection");
 		var scenarios = Resources.LoadAll ("Scenarios", typeof (Sprite));
 		Debug.Log ("Tamanho:" + scenarios.Length);
 		image = GetComponent<Image> ();
 		selectionIndex = 0;
+		nextIndex = selectionIndex + 1;
+		VerifyIndex(ref nextIndex);
+		previousIndex = arenaList.Count;
+		VerifyIndex(ref previousIndex);
 		LoadAll (scenarios);
 		image.sprite = arenaList[selectionIndex];
+		
+		projectionImage = projectionObject.GetComponent<Image>();
+		nextProjectionImage = nextProjectionObject.GetComponent<Image>();
+		previousProjectionImage = previousProjectionObject.GetComponent<Image>();
+		
+		projectionImage.sprite = image.sprite;
+		nextProjectionImage.sprite = arenaList[nextIndex];
+		previousProjectionImage.sprite = arenaList[previousIndex];
 	}
 
 	// Update is called once per frame
 	void Update () {
 		
 		textBox.text = arenaList[selectionIndex].name.ToUpper();
+		projectionImage.sprite = image.sprite;
 
 		if (selectionDelay < Time.time) {
 			if (Input.GetButton (leftButton))
@@ -82,14 +108,26 @@ public class ArenaSelection : MonoBehaviour {
 	public void Next () {
 		selectionIndex++;
 		VerifyIndex (ref selectionIndex);
+		nextIndex = selectionIndex + 1;
+		VerifyIndex(ref nextIndex);
+		previousIndex = selectionIndex - 1;
+		VerifyIndex(ref previousIndex);
 		image.sprite = arenaList[selectionIndex];
+		nextProjectionImage.sprite = arenaList[nextIndex];
+		previousProjectionImage.sprite = arenaList[previousIndex];
 		Debug.Log ("Index: " + selectionIndex);
 	}
 
 	public void Previous () {
 		selectionIndex--;
 		VerifyIndex (ref selectionIndex);
+		nextIndex = selectionIndex + 1;
+		VerifyIndex(ref nextIndex);
+		previousIndex = selectionIndex - 1;
+		VerifyIndex(ref previousIndex);
 		image.sprite = arenaList[selectionIndex];
+		nextProjectionImage.sprite = arenaList[nextIndex];
+		previousProjectionImage.sprite = arenaList[previousIndex];
 		Debug.Log ("Index: " + selectionIndex);
 	}
 
@@ -102,8 +140,9 @@ public class ArenaSelection : MonoBehaviour {
 	IEnumerator selectedArenaDelay()
 	{
 		audioSource.clip = @selected;
-		audioSource.Play();
-		yield return new WaitForSeconds(selected.length);
+		audioSource.Play(1);
+		yield return new WaitWhile (()=> audioSource.isPlaying);
+		
 	}
 
 	private void selectArena () {
