@@ -9,6 +9,9 @@ public class ArenaSelection : MonoBehaviour {
 	private float selectionDelay;
 
 	public float delayTime;
+	
+	private string Name;
+	private Text textBox;
 
 	//inputs
 	private string leftButton;
@@ -24,6 +27,7 @@ public class ArenaSelection : MonoBehaviour {
 		leftButton = "Left2";
 		rightButton = "Right2";
 		selectionButton = "Selection1";
+		textBox = GetComponentInChildren<Text>();
 		var scenarios = Resources.LoadAll ("Scenarios", typeof (Sprite));
 		Debug.Log ("Tamanho:" + scenarios.Length);
 		image = GetComponent<Image> ();
@@ -34,6 +38,9 @@ public class ArenaSelection : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		
+		textBox.text = arenaList[selectionIndex].name.ToUpper();
+
 		if (selectionDelay < Time.time) {
 			if (Input.GetButton (leftButton)) {
 				selectionDelay = Time.time + delayTime;
