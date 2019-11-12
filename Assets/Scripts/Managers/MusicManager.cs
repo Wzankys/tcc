@@ -8,7 +8,7 @@ public class MusicManager : MonoBehaviour
     
     void Awake ()
     {
-        var gameObject = GameObject.Find("Menu Music"); 
+        var gameObject = GameObject.Find("Music Manager"); 
         gameObject.GetComponent<AudioSource>().clip = audioClip; 
         gameObject.GetComponent<AudioSource>().Play(); 
     }

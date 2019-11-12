@@ -1,10 +1,13 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CharacterSelection : MonoBehaviour
 {
 
     public int playerNumber;
+    private string Name;
+    private Text textBox;
 
     private int selectionIndex;
 
@@ -32,6 +35,7 @@ public class CharacterSelection : MonoBehaviour
         leftButton = "Left"+playerNumber;
         rightButton = "Right"+playerNumber;
         selectionButton = "Selection"+playerNumber;
+        textBox = GetComponentInChildren<Text>();
         var controllers = Resources.LoadAll("Characters", typeof(CharacterInfo));
         //Debug.Log("Tamanho:"+controllers.Length);
         selectionIndex = 0;
@@ -43,6 +47,8 @@ public class CharacterSelection : MonoBehaviour
     
     void Update()
     {
+        textBox.text = charactersList[selectionIndex].name.ToUpper();
+        //Debug.Log(charactersList[selectionIndex].name);
         if (selectionDelay < Time.time)
         {
             if (Input.GetButton(leftButton))
