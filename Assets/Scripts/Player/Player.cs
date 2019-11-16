@@ -17,6 +17,7 @@ public class Player : MonoBehaviour {
 	private bool isJumping, isGrounded, isFacingRight = true, jump = false;
 	private Vector3 velocity;
 	private int jumpCount = 0;
+	private const int boundsOffest = 2;
 	public int ID {
 		get { return playerStats.playerId; }
 	}
@@ -38,11 +39,12 @@ public class Player : MonoBehaviour {
 
 	void FixedUpdate () {
 		Move ();
+		LimitBounds ();
 	}
-	void OnTakeDamage (Stats playerStats,Player enemy) {
+	void OnTakeDamage (Stats playerStats, Player enemy) {
 		PlayDamageAnimation ();
-        Debug.Log("KNOCKBACK " + enemy);
-        Knockback(enemy);
+		Debug.Log ("KNOCKBACK " + enemy);
+		Knockback (enemy);
 	}
 	void OnPlayerDeath (Stats playerStats) {
 		PlayDeathAnimation ();
@@ -52,10 +54,10 @@ public class Player : MonoBehaviour {
 		return Mathf.Clamp (transform.localScale.x, -1, 1);
 	}
 	public void Knockback (Player enemy) {
-        if (enemy == null) return;
-		float dir = enemy.FacingDirection() ;
-		rb.AddForce (new Vector2(dir,0) * knockbackForce, ForceMode2D.Impulse);
-        Debug.Log("Tomei KnockBack:" + dir * knockbackForce);
+		if (enemy == null) return;
+		float dir = enemy.FacingDirection ();
+		rb.AddForce (new Vector2 (dir, 0) * knockbackForce, ForceMode2D.Impulse);
+		Debug.Log ("Tomei KnockBack:" + dir * knockbackForce);
 	}
 	void PlayDamageAnimation () {
 		animator.SetTrigger ("LevarDano");
@@ -77,13 +79,12 @@ public class Player : MonoBehaviour {
 	}
 	void DashInput () {
 		if (Input.GetButtonDown ("Dash" + ID)) {
-            Dash ();
+			Dash ();
 		}
 	}
 	void Dash () {
-        animator.SetBool("isDash", true);
-        rb.AddForce (transform.TransformDirection (Vector2.right) * FacingDirection () * dashForce, ForceMode2D.Impulse);
-        
+		animator.SetBool ("isDash", true);
+		rb.AddForce (transform.TransformDirection (Vector2.right) * FacingDirection () * dashForce, ForceMode2D.Impulse);
 	}
 
 	void UpdateAnimations () {
@@ -92,6 +93,7 @@ public class Player : MonoBehaviour {
 	void Move () {
 		// Move the character by finding the target velocity
 		Vector3 targetVelocity = new Vector2 (horizontalAxis * Time.fixedDeltaTime * 10f, rb.velocity.y);
+
 		// And then smoothing it out and applying it to the character
 		rb.velocity = Vector3.SmoothDamp (rb.velocity, targetVelocity, ref velocity, m_MovementSmoothing);
 
@@ -106,6 +108,13 @@ public class Player : MonoBehaviour {
 			Flip ();
 		}
 
+	}
+
+	void LimitBounds () {
+		Bounds cameraBounds = Camera.main.OrthographicBounds ();
+		float clampedX = Mathf.Clamp (rb.position.x, cameraBounds.min.x + boundsOffest, cameraBounds.max.x - boundsOffest);
+		float clampedY = Mathf.Clamp (rb.position.y, cameraBounds.min.y, cameraBounds.max.y);
+		rb.position = new Vector2 (clampedX, clampedY);
 	}
 
 	void Jump () {
@@ -156,8 +165,7 @@ public class Player : MonoBehaviour {
 	float FacingDirection () {
 		return Mathf.Clamp (transform.localScale.x, -1, 1);
 	}
-    void stopDash()
-    {
-        animator.SetBool("isDash", false);
-    }
+	void stopDash () {
+		animator.SetBool ("isDash", false);
+	}
 }
