@@ -8,17 +8,18 @@ public class Stats : MonoBehaviour {
 	public float maxHealthPoints = 100.0f;
 	public float reiatsuPoints = 100.0f;
 
-	public float reiatsuRechargeRate;
+	public float reiatsuRechargeRate = 5;
 
 	public float resistence;
 	public float magicalResist;
 
 	public float damage;
 	public float magicalDamage;
-	public delegate void StatskHandler (Stats stats);
-    public delegate void AttackHandler(Stats stats,Player enemy);
-    public AttackHandler OnTakeDamage;
-	public StatskHandler OnPlayerDeath;
+	public delegate void StatsHandler (Stats stats);
+	public delegate void AttackHandler (Stats stats, Player enemy);
+	public AttackHandler OnTakeDamage;
+	public StatsHandler OnPlayerDeath;
+	public StatsHandler OnChargeReiatsu;
 	public string GetPlayerIdName () {
 		return GetName (playerId);
 	}
@@ -35,11 +36,11 @@ public class Stats : MonoBehaviour {
 		return "Player" + id;
 	}
 
-	public void TakeDamage (float damage,Player enemy) {
+	public void TakeDamage (float damage, Player enemy) {
 		healthPoints -= damage;
-        Debug.Log("TAKE DAMAGE " + enemy);
-        //Debug.Log (GetPlayerIdName () + " took " + damage + " damage");
-        SafelyCallOnTakeDamage (enemy);
+		Debug.Log ("TAKE DAMAGE " + enemy);
+		//Debug.Log (GetPlayerIdName () + " took " + damage + " damage");
+		SafelyCallOnTakeDamage (enemy);
 		if (healthPoints <= 0) {
 			SafelyCallOnPlayerDeath ();
 		}
@@ -51,14 +52,19 @@ public class Stats : MonoBehaviour {
 
 	public void SafelyCallOnTakeDamage (Player enemy) {
 		if (OnTakeDamage != null) {
-            Debug.Log("Enemy " + enemy);
-			OnTakeDamage (this,enemy);
-        }
+			Debug.Log ("Enemy " + enemy);
+			OnTakeDamage (this, enemy);
+		}
 	}
 	public void SafelyCallOnPlayerDeath () {
 		if (OnPlayerDeath != null) {
 			OnPlayerDeath (this);
 		}
+	}
+
+	public void ChargeReiatsu (float amount) {
+		reiatsuPoints += amount;
+		if (OnChargeReiatsu != null) OnChargeReiatsu (this);
 	}
 
 }

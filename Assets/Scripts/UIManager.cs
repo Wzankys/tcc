@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour {
 	public Slider hpUI;
 	public Slider hpUI2;
+	public Slider reiatsuUI;
+	public Slider reiatsuUI2;
 	public Image playerImg, playerImg2;
 
 	public Stats[] stats;
@@ -20,6 +22,7 @@ public class UIManager : MonoBehaviour {
 		stats = FindObjectsOfType<Stats> ();
 		foreach (var stat in stats) {
 			stat.OnTakeDamage += OnPlayerTakeDamage;
+			stat.OnChargeReiatsu += OnPlayerChargeReiatsu;
 		}
 	}
 	private void OrderStats () {
@@ -30,9 +33,13 @@ public class UIManager : MonoBehaviour {
 		}
 	}
 
-	public void OnPlayerTakeDamage (Stats playerStats,Player enemy) {
+	public void OnPlayerTakeDamage (Stats playerStats, Player enemy) {
 		Slider playerBar = playerStats.playerId == 1 ? hpUI : hpUI2;
-		UpdateHP (playerBar, (int) playerStats.healthPoints);
+		UpdateBar (playerBar, (int) playerStats.healthPoints);
+	}
+	public void OnPlayerChargeReiatsu (Stats playerStats) {
+		Slider playerBar = playerStats.playerId == 1 ? reiatsuUI : reiatsuUI2;
+		UpdateBar (playerBar, (int) playerStats.reiatsuPoints);
 	}
 
 	public void SetupHealthBar () {
@@ -41,10 +48,17 @@ public class UIManager : MonoBehaviour {
 
 		hpUI2.maxValue = stats[1].maxHealthPoints;
 		hpUI2.value = hpUI2.maxValue;
+
+		reiatsuUI.maxValue = 100;
+		reiatsuUI.value = stats[0].reiatsuPoints;
+
+		reiatsuUI2.maxValue = 100;
+		reiatsuUI.value = stats[1].reiatsuPoints;
 	}
-	public void UpdateHP (Slider bar, int value) {
+	public void UpdateBar (Slider bar, int value) {
 		bar.value = value;
 	}
+
 	public void UpdateHP1 (int qntd) {
 		hpUI.value = qntd;
 	}

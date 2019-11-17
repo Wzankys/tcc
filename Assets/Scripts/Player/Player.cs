@@ -18,8 +18,14 @@ public class Player : MonoBehaviour {
 	private Vector3 velocity;
 	private int jumpCount = 0;
 	private const int boundsOffest = 2;
+	private bool canChargeReiatsu;
 	public int ID {
 		get { return playerStats.playerId; }
+	}
+	public bool IsChargingReiatsu {
+		get {
+			return animator.GetBool ("ChargeReiatsu");
+		}
 	}
 
 	void Awake () {
@@ -67,13 +73,15 @@ public class Player : MonoBehaviour {
 	}
 
 	void GetInput () {
-		horizontalAxis = Input.GetAxisRaw ("Horizontal" + ID) * speed;
+		horizontalAxis = Input.GetAxisRaw ("Horizontal" + ID);
 		JumpInput ();
 		DashInput ();
+		ReiatsuInput ();
 	}
 
 	void JumpInput () {
 		if (Input.GetButtonDown ("Jump" + ID)) {
+			Debug.Log ("PRESSED JUMP " + ID);
 			Jump ();
 		}
 	}
@@ -81,6 +89,19 @@ public class Player : MonoBehaviour {
 		if (Input.GetButtonDown ("Dash" + ID)) {
 			Dash ();
 		}
+	}
+	void ReiatsuInput () {
+		if (!IsGrounded ()) return;
+		if (Input.GetButton ("Reiatsu" + ID)) {
+			ChargeReiatsu ();
+		} else if (Input.GetButtonUp ("Reiatsu" + ID)) {
+			animator.SetBool ("ChargeReiatsu", false);
+		}
+	}
+
+	void ChargeReiatsu () {
+		playerStats.ChargeReiatsu (playerStats.reiatsuRechargeRate * Time.deltaTime);
+		animator.SetBool ("ChargeReiatsu", true);
 	}
 	void Dash () {
 		animator.SetBool ("isDash", true);
@@ -91,8 +112,10 @@ public class Player : MonoBehaviour {
 		animator.SetFloat ("Speed", Mathf.Abs (horizontalAxis));
 	}
 	void Move () {
+		if (IsChargingReiatsu) return;
 		// Move the character by finding the target velocity
-		Vector3 targetVelocity = new Vector2 (horizontalAxis * Time.fixedDeltaTime * 10f, rb.velocity.y);
+		// horizontalAxis = horizontalAxis > 0.5f || horizontalAxis < 0.5f ? horizontalAxis : 0;
+		Vector3 targetVelocity = new Vector2 (horizontalAxis * Time.fixedDeltaTime * 10f * speed, rb.velocity.y);
 
 		// And then smoothing it out and applying it to the character
 		rb.velocity = Vector3.SmoothDamp (rb.velocity, targetVelocity, ref velocity, m_MovementSmoothing);
