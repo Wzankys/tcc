@@ -14,15 +14,16 @@ public class GameManager : Singleton<GameManager> {
 	wins1,
 	wins2;
 	private float _timer = 60;
-	private int player1Wins,
+	private static int player1Wins,
 	player2Wins;
 
 	public static void Show (SelectionSettings settings) {
 		SceneManager.LoadScene ("Game");
 		_selectionSettings = settings;
-
 	}
 	void Start () {
+		wins1.text = player1Wins.ToString ();
+		wins2.text = player2Wins.ToString ();
 		gameState = GameState.GAME;
 		background.sprite = _selectionSettings.selectedArena.sprite;
 		foreach (var player in _selectionSettings.selectionInfos) {
@@ -43,9 +44,13 @@ public class GameManager : Singleton<GameManager> {
 		}
 	}
 	void OnPlayerDeath (Stats stats) {
-		players[stats.GetOpponentRawId ()].playerStats.wins++;
-		wins1.text = players[0].playerStats.wins.ToString ();
-		wins1.text = players[1].playerStats.wins.ToString ();
+		if (stats.GetOpponentRawId () == 0) {
+			player1Wins++;
+		}
+		if (stats.GetOpponentRawId () == 1) {
+			player2Wins++;
+		}
+
 		gameState = GameState.GAMEOVER;
 		StartCoroutine (ResetGameCoroutine ());
 	}

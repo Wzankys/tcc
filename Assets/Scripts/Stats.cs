@@ -21,6 +21,7 @@ public class Stats : MonoBehaviour {
 	public AttackHandler OnTakeDamage;
 	public StatsHandler OnPlayerDeath;
 	public StatsHandler OnChargeReiatsu;
+	private bool isDead = false;
 	public string GetPlayerIdName () {
 		return GetName (playerId);
 	}
@@ -46,13 +47,10 @@ public class Stats : MonoBehaviour {
 		Debug.Log ("TAKE DAMAGE " + enemy);
 		//Debug.Log (GetPlayerIdName () + " took " + damage + " damage");
 		SafelyCallOnTakeDamage (enemy);
-		if (healthPoints <= 0) {
+		if (healthPoints <= 0 && !isDead) {
+			isDead = true;
 			SafelyCallOnPlayerDeath ();
 		}
-	}
-
-	public bool IsDead () {
-		return healthPoints <= 0;
 	}
 
 	public void SafelyCallOnTakeDamage (Player enemy) {
