@@ -12,7 +12,8 @@ public class GameManager : Singleton<GameManager> {
 	public GameState gameState;
 	public Text txtTimer,
 	wins1,
-	wins2;
+	wins2,
+	txtPlayerWins;
 	private float _timer = 60;
 	private static int player1Wins,
 	player2Wins;
@@ -22,6 +23,7 @@ public class GameManager : Singleton<GameManager> {
 		_selectionSettings = settings;
 	}
 	void Start () {
+		txtPlayerWins.enabled = false;
 		wins1.text = player1Wins.ToString ();
 		wins2.text = player2Wins.ToString ();
 		gameState = GameState.GAME;
@@ -44,6 +46,7 @@ public class GameManager : Singleton<GameManager> {
 		}
 	}
 	void OnPlayerDeath (Stats stats) {
+		gameState = GameState.GAMEOVER;
 		if (stats.GetOpponentRawId () == 0) {
 			player1Wins++;
 		}
@@ -51,13 +54,33 @@ public class GameManager : Singleton<GameManager> {
 			player2Wins++;
 		}
 
-		gameState = GameState.GAMEOVER;
+		if (player1Wins >= 2) {
+			txtPlayerWins.enabled = true;
+			txtPlayerWins.text = "PLAYER 1 WINS!";
+			player1Wins = 0;
+			player2Wins = 0;
+			StartCoroutine (SelectScreenCoroutine ());
+			return;
+		} else if (player2Wins >= 2) {
+			txtPlayerWins.enabled = true;
+			txtPlayerWins.text = "PLAYER 2 WINS!";
+			player1Wins = 0;
+			player2Wins = 0;
+
+			StartCoroutine (SelectScreenCoroutine ());
+			return;
+		}
+
 		StartCoroutine (ResetGameCoroutine ());
 	}
 
 	IEnumerator ResetGameCoroutine () {
 		yield return new WaitForSeconds (3);
 		Show (_selectionSettings);
+	}
+	IEnumerator SelectScreenCoroutine () {
+		yield return new WaitForSeconds (3);
+		SceneManager.LoadScene ("Select");
 	}
 
 	public bool CompareState (GameState state) {
