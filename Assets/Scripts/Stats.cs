@@ -15,6 +15,7 @@ public class Stats : MonoBehaviour {
 
 	public float damage;
 	public float magicalDamage;
+	public int wins = 0;
 	public delegate void StatsHandler (Stats stats);
 	public delegate void AttackHandler (Stats stats, Player enemy);
 	public AttackHandler OnTakeDamage;
@@ -23,8 +24,12 @@ public class Stats : MonoBehaviour {
 	public string GetPlayerIdName () {
 		return GetName (playerId);
 	}
-	public string GetOpponentId () {
+	public int GetOpponentRawId () {
 		int opponentId = playerId == 1 ? 2 : 1;
+		return opponentId;
+	}
+	public string GetOpponentId () {
+		int opponentId = GetOpponentRawId ();
 		return GetName (opponentId);
 	}
 

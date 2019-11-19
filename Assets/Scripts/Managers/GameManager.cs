@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : Singleton<GameManager> {
 
@@ -9,6 +10,13 @@ public class GameManager : Singleton<GameManager> {
 	public SpriteRenderer background;
 	public List<Player> players;
 	public GameState gameState;
+	public Text txtTimer,
+	wins1,
+	wins2;
+	private float _timer = 60;
+	private int player1Wins,
+	player2Wins;
+
 	public static void Show (SelectionSettings settings) {
 		SceneManager.LoadScene ("Game");
 		_selectionSettings = settings;
@@ -35,6 +43,9 @@ public class GameManager : Singleton<GameManager> {
 		}
 	}
 	void OnPlayerDeath (Stats stats) {
+		players[stats.GetOpponentRawId ()].playerStats.wins++;
+		wins1.text = players[0].playerStats.wins.ToString ();
+		wins1.text = players[1].playerStats.wins.ToString ();
 		gameState = GameState.GAMEOVER;
 		StartCoroutine (ResetGameCoroutine ());
 	}
@@ -48,6 +59,7 @@ public class GameManager : Singleton<GameManager> {
 		return state == gameState;
 	}
 	void Update () {
-
+		_timer -= Time.deltaTime;
+		txtTimer.text = ((int) _timer).ToString ();
 	}
 }
