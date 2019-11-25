@@ -28,6 +28,7 @@
           <e p="Readme.txt" t="Include" />
         </e>
         <e p="Resources" t="Include">
+          <e p="Controle Hitsu Mapa.txt" t="Include" />
           <e p="Shaders" t="Include">
             <e p="TexturedFont.shader" t="Include" />
           </e>
