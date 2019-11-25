@@ -1,0 +1,12 @@
+Triangulo - 0
+Bola - 1
+X - 2
+Quadrado - 3
+
+L1 - 4
+L2 - 6
+R1 - 5
+R2 - 7
+
+Select - 8
+Start - 9

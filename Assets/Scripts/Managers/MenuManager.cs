@@ -5,22 +5,26 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
+    private string start, cancel;
     // Start is called before the first frame update
     void Start()
     {
+        start = "Start";
+        cancel = "Cancel";
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetButton(start))
         {
             SceneManager.LoadScene("Select");
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetButton(cancel))
         {
             Application.Quit();
         }
+
     }
 }

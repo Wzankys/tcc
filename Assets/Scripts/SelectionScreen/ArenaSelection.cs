@@ -41,8 +41,8 @@ public class ArenaSelection : MonoBehaviour {
 
 	// Start is called before the first frame update
 	void Start () {
-		leftButton = "Left2";
-		rightButton = "Right2";
+		leftButton = "Left1";
+		rightButton = "Right1";
 		selectionButton = "Selection1";
 		textBox = GetComponentInChildren<Text>();
 		audioSource = GetComponent<AudioSource>();
@@ -92,7 +92,6 @@ public class ArenaSelection : MonoBehaviour {
 
 		if (Input.GetButtonDown (selectionButton)) {
 			print ("AAAAAAA");
-			StartCoroutine(selectedArenaDelay());
 			selectArena ();
 		}
 
@@ -140,12 +139,12 @@ public class ArenaSelection : MonoBehaviour {
 	IEnumerator selectedArenaDelay()
 	{
 		audioSource.clip = @selected;
-		audioSource.Play(1);
-		yield return new WaitWhile (()=> audioSource.isPlaying);
-		
+		audioSource.Play();
+		yield return new WaitWhile(()=>audioSource.isPlaying);
+		HudManager.Instance.OnSelectedArena (arenaList[selectionIndex]);
 	}
 
 	private void selectArena () {
-		HudManager.Instance.OnSelectedArena (arenaList[selectionIndex]);
+		StartCoroutine(selectedArenaDelay());
 	}
 }
