@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 	public Stats playerStats;
+	public Sprite icon;
 	[Header ("Movement Settings")]
 	public float knockbackForce = 8;
 	public float jumpForce = 400f;

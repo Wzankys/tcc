@@ -10,6 +10,8 @@ public class GameManager : Singleton<GameManager> {
 	public SpriteRenderer background;
 	public List<Player> players;
 	public GameState gameState;
+	public Image p1Icon,
+	p2Icon;
 	public Text txtTimer,
 	wins1,
 	wins2,
@@ -36,8 +38,10 @@ public class GameManager : Singleton<GameManager> {
 			playerObject.layer = LayerMask.NameToLayer ("Player" + player.selectedCharacter.number);
 			playerObject.GetComponentInChildren<BoxCollider2D> (true).gameObject.layer = LayerMask.NameToLayer ("Player" + player.selectedCharacter.number + "Hit");
 			if (player.selectedCharacter.number == 1) {
+				p1Icon.sprite = player.selectedCharacter.prefab.GetComponent<Player> ().icon;
 				playerObject.transform.position = new Vector2 (-54, -36);
 			} else if (player.selectedCharacter.number == 2) {
+				p2Icon.sprite = player.selectedCharacter.prefab.GetComponent<Player> ().icon;
 				playerObject.transform.position = new Vector2 (-24, -36);
 			}
 			Player playerScript = playerObject.GetComponent<Player> ();
@@ -87,7 +91,17 @@ public class GameManager : Singleton<GameManager> {
 		return state == gameState;
 	}
 	void Update () {
-		_timer -= Time.deltaTime;
+		if (_timer > 0)
+			_timer -= Time.deltaTime;
 		txtTimer.text = ((int) _timer).ToString ();
+		if (_timer <= 0 && gameState != GameState.GAMEOVER) {
+			gameState = GameState.GAMEOVER;
+			if (players[0].playerStats.healthPoints >= players[1].playerStats.healthPoints) {
+				player1Wins++;
+			} else {
+				player2Wins++;
+			}
+			StartCoroutine (ResetGameCoroutine ());
+		}
 	}
 }
