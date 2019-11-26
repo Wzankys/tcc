@@ -10,9 +10,17 @@ public class HudManager : Singleton<HudManager> {
     private bool[] everythingSelected;
 
     private SelectionSettings settings = new SelectionSettings ();
+    private GameObject audioPlayer;
+    private AudioSource audioSource;
+    public AudioClip music;
 
     // Start is called before the first frame update
     void Start () {
+        audioPlayer = GameObject.Find ("Music Manager");
+        audioSource = audioPlayer.GetComponent<AudioSource>();
+        audioSource.loop = true;
+        audioSource.clip = music;
+        audioSource.Play();
         //ForEach using lambda C#
         players.ForEach ((player) => player.enabled = true);
         arena.enabled = false;

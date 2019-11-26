@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MusicManager : MonoBehaviour {
-	public AudioClip audioClip;
+	public AudioClip musicMenu;
 
-	void Awake () {
+	void Awake ()
+	{
+		
 		var gameObject = GameObject.Find ("Music Manager");
-		AudioSource audioSource = GetComponent<AudioSource> ();
+		AudioSource audioSource = gameObject.GetComponent<AudioSource> ();
 		if (audioSource != null) {
-			audioSource.clip = audioClip;
+			audioSource.clip = musicMenu;
+			audioSource.loop = true;
 			audioSource.Play ();
 		}
 	}

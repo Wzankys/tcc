@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour {
+
+
 	public Stats playerStats;
 	public Sprite icon;
+	
 	[Header ("Movement Settings")]
 	public float knockbackForce = 8;
 	public float jumpForce = 400f;
@@ -20,6 +23,7 @@ public class Player : MonoBehaviour {
 	private int jumpCount = 0;
 	private const int boundsOffest = 2;
 	private bool canChargeReiatsu;
+	
 	public int ID {
 		get { return playerStats.playerId; }
 	}
@@ -29,7 +33,8 @@ public class Player : MonoBehaviour {
 		}
 	}
 
-	void Awake () {
+	void Awake ()
+	{
 		rb = GetComponent<Rigidbody2D> ();
 		playerStats = GetComponent<Stats> ();
 		animator = GetComponent<Animator> ();
@@ -153,7 +158,7 @@ public class Player : MonoBehaviour {
 			jumpCount++;
 		}
 	}
-	private void Flip () {
+	public void Flip () {
 		// Switch the way the player is labelled as facing.
 		isFacingRight = !isFacingRight;
 
@@ -192,4 +197,6 @@ public class Player : MonoBehaviour {
 	void stopDash () {
 		animator.SetBool ("isDash", false);
 	}
+
+	
 }

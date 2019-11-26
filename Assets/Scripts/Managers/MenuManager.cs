@@ -6,11 +6,18 @@ using UnityEngine.SceneManagement;
 public class MenuManager : MonoBehaviour
 {
     private string start, cancel;
+
+    public GameObject audioManager;
+
+    private AudioSource audioSource;
+    public AudioClip transitionSound;
+    
     // Start is called before the first frame update
     void Start()
     {
         start = "Start";
         cancel = "Cancel";
+        audioSource = audioManager.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -18,7 +25,7 @@ public class MenuManager : MonoBehaviour
     {
         if (Input.GetButton(start))
         {
-            SceneManager.LoadScene("Select");
+            StartCoroutine(LoadSceneCoroutine());
         }
 
         if (Input.GetButton(cancel))
@@ -26,5 +33,14 @@ public class MenuManager : MonoBehaviour
             Application.Quit();
         }
 
+    }
+
+    IEnumerator LoadSceneCoroutine()
+    {
+        audioSource.clip = transitionSound;
+        audioSource.loop = false;
+        audioSource.Play();
+        yield return new WaitWhile(()=>audioSource.isPlaying);
+        SceneManager.LoadScene("Select");
     }
 }

@@ -15,6 +15,8 @@ public class GameManager : Singleton<GameManager> {
 	public Text txtTimer,
 	wins1,
 	wins2,
+	name1,
+	name2,
 	txtPlayerWins;
 	private float _timer = 60;
 	private static int player1Wins,
@@ -39,10 +41,13 @@ public class GameManager : Singleton<GameManager> {
 			playerObject.GetComponentInChildren<BoxCollider2D> (true).gameObject.layer = LayerMask.NameToLayer ("Player" + player.selectedCharacter.number + "Hit");
 			if (player.selectedCharacter.number == 1) {
 				p1Icon.sprite = player.selectedCharacter.prefab.GetComponent<Player> ().icon;
+				name1.text = player.selectedCharacter.prefab.name.ToUpper();
 				playerObject.transform.position = new Vector2 (-54, -36);
 			} else if (player.selectedCharacter.number == 2) {
 				p2Icon.sprite = player.selectedCharacter.prefab.GetComponent<Player> ().icon;
+				name2.text = player.selectedCharacter.prefab.name.ToUpper();
 				playerObject.transform.position = new Vector2 (-24, -36);
+				playerObject.GetComponent<Player>().Flip();
 			}
 			Player playerScript = playerObject.GetComponent<Player> ();
 			players.Add (playerScript);
@@ -51,11 +56,14 @@ public class GameManager : Singleton<GameManager> {
 	}
 	void OnPlayerDeath (Stats stats) {
 		gameState = GameState.GAMEOVER;
-		if (stats.GetOpponentRawId () == 0) {
-			player1Wins++;
-		}
+		Debug.Log(stats.GetOpponentRawId ());
 		if (stats.GetOpponentRawId () == 1) {
+			player1Wins++;
+			Debug.Log("p1 wins");
+		}
+		if (stats.GetOpponentRawId () == 2) {
 			player2Wins++;
+			Debug.Log("p2 wins");
 		}
 
 		if (player1Wins >= 2) {

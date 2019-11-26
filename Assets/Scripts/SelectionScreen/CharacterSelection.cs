@@ -26,6 +26,7 @@ public class CharacterSelection : MonoBehaviour
     private Animator animator;
 
     private AudioSource audioSource;
+    public AudioClip selectSound;
 
     private List<CharacterInfo> charactersList = new List<CharacterInfo>();
 
@@ -56,12 +57,16 @@ public class CharacterSelection : MonoBehaviour
         {
             if (Input.GetButton(leftButton))
             {
+                audioSource.clip = selectSound;
+                audioSource.Play();
                 selectionDelay = Time.time + delayTime;
                 Previous();
             }
 
             if (Input.GetButton(rightButton))
             {
+                audioSource.clip = selectSound;
+                audioSource.Play();
                 selectionDelay = Time.time + delayTime;
                 Next();
             }

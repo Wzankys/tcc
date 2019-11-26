@@ -1,0 +1,413 @@
+fileFormatVersion: 2
+guid: 7ac98b77c2288804ebe99c74ee667016
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8238397359204517854
+    second: Especial1_0
+  - first:
+      213: 1528617993157348751
+    second: Especial1_1
+  - first:
+      213: -2502262377221927762
+    second: Especial1_2
+  - first:
+      213: 3409917306119786123
+    second: Especial1_3
+  - first:
+      213: 3017309694099326386
+    second: Especial1_4
+  - first:
+      213: 8429315800181618145
+    second: Especial1_6
+  - first:
+      213: 4024499980601570844
+    second: Especial1_11
+  - first:
+      213: -9036461948730218583
+    second: Especial1_12
+  - first:
+      213: -2686107031354970425
+    second: Especial1_16
+  - first:
+      213: 7619285555876422080
+    second: Especial1_17
+  - first:
+      213: -1646218686419004821
+    second: Especial1_18
+  - first:
+      213: 4036507541620416501
+    second: Especial1_19
+  - first:
+      213: -1956982574173759360
+    second: Especial1_20
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Especial1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 47
+        height: 110
+      alignment: 9
+      pivot: {x: 0.6, y: 0}
+      border: {x: 1, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a442d58cd4b4c1e4cb7464c20fdb42b4
+      internalID: 8238397359204517854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Especial1_1
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 3
+        width: 48
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6bb79b7b54e0b849a1020a24ef55a34
+      internalID: 1528617993157348751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Especial1_2
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 3
+        width: 63
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c790da37b4d2ffd4cad4ae605e1c312d
+      internalID: -2502262377221927762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Especial1_3
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 3
+        width: 79
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74bc1887a7b287e4ab0c0869af47a785
+      internalID: 3409917306119786123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Especial1_4
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 3
+        width: 78
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84838229307430b46afe57eb44e6fc34
+      internalID: 3017309694099326386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Especial1_6
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 0
+        width: 76
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d66feceafbef02744ad3ebc0e347a0ae
+      internalID: 8429315800181618145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Especial1_11
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 0
+        width: 79
+        height: 110
+      alignment: 9
+      pivot: {x: 0.29, y: 0.2605}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48fe8320083ef8b40a8d41d382e38b69
+      internalID: 4024499980601570844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Especial1_12
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 0
+        width: 64
+        height: 110
+      alignment: 9
+      pivot: {x: 0.32, y: 0.248}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d77f778ea5889f44e8e4a2b5662b6514
+      internalID: -9036461948730218583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Especial1_16
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 0
+        width: 47
+        height: 110
+      alignment: 9
+      pivot: {x: 0.554, y: 0.24}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 028c2aa4aecdb3d479fe778efaa7fb8b
+      internalID: -2686107031354970425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Especial1_17
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 0
+        width: 49
+        height: 110
+      alignment: 9
+      pivot: {x: 0.52, y: 0.24}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e0ce550bad5e8e4591a94e492ce0467
+      internalID: 7619285555876422080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Especial1_18
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 0
+        width: 53
+        height: 110
+      alignment: 9
+      pivot: {x: 0.6, y: 0.24}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de12f1f2cc912e845bf0f8ef5c118b8a
+      internalID: -1646218686419004821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Especial1_19
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 0
+        width: 91
+        height: 110
+      alignment: 9
+      pivot: {x: 0.258, y: 0.235}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9c2ae4c36ec5254e9fd6ee27ad8cea0
+      internalID: 4036507541620416501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Especial1_20
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 0
+        width: 44
+        height: 110
+      alignment: 9
+      pivot: {x: 0.35, y: 0.248}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0884f7f7e2db07418a46290cda42da0
+      internalID: -1956982574173759360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 0b59d398f0b2d644dacbc0bd279cc5e3
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
