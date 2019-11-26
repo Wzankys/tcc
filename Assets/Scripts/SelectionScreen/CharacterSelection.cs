@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class CharacterSelection : MonoBehaviour
@@ -20,6 +22,7 @@ public class CharacterSelection : MonoBehaviour
     private string leftButton;
     private string rightButton;
     private string selectionButton;
+    private string backButton;
 
     private bool haveInstance = false;
     
@@ -37,6 +40,7 @@ public class CharacterSelection : MonoBehaviour
         leftButton = "Left"+playerNumber;
         rightButton = "Right"+playerNumber;
         selectionButton = "Selection"+playerNumber;
+        backButton = "Cancel";
         textBox = GetComponentInChildren<Text>();
         var controllers = Resources.LoadAll("Characters", typeof(CharacterInfo));
         //Debug.Log("Tamanho:"+controllers.Length);
@@ -76,6 +80,13 @@ public class CharacterSelection : MonoBehaviour
         {
             selectCharacter();
         }
+
+        if (Input.GetButton(backButton))
+        {
+            SceneManager.LoadScene("Menu");
+        }
+        
+        
         
     }
 

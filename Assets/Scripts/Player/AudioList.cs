@@ -4,56 +4,71 @@ using UnityEngine;
 
 public class AudioList : MonoBehaviour
 {
-    public AudioClip sPresentation, sWin, sDash, sJump, sSelect, sAttack1, sAttack2, sAttack3, sHit1, sDeath;
+    public AudioClip sPresentation, sWin, sDash, sJump, sSelect, sAttack1, sAttack2, sAttack3, sHit1, sDeath,r1,r2,r3;
     private AudioSource audioS;
      void Start()
     {
         audioS = GetComponent<AudioSource>();
     }
 
-   public void PlaySong(AudioClip clip)
+   IEnumerator PlaySong(AudioClip clip)
     {
         audioS.clip = clip;
         audioS.Play();
+        yield return new WaitWhile(()=>audioS.isPlaying);
     }
     public void jumpSound()
     {
-        PlaySong(sJump);
+        StartCoroutine(PlaySong(sJump));
     }
     public void selectSound()
     {
-        PlaySong(sSelect);
+        StartCoroutine(PlaySong(sSelect));
     }
     public void attack1Sound()
     {
-        PlaySong(sAttack1);
+        StartCoroutine(PlaySong(sAttack1));
     }
     public void attack2Sound()
     {
-        PlaySong(sAttack2);
+        StartCoroutine(PlaySong(sAttack2));
     }
     public void attack3Sound()
     {
-        PlaySong(sAttack3);
+        StartCoroutine(PlaySong(sAttack3));
     }
     public void hitSound()
     {
-        PlaySong(sHit1);
+        StartCoroutine(PlaySong(sHit1));
     }
     public void deathSound()
     {
-        PlaySong(sDeath);
+        StartCoroutine(PlaySong(sDeath));
     }
     public void winSound()
     {
-        PlaySong(sWin);
+        StartCoroutine(PlaySong(sWin));
     }
     public void presentationSound()
     {
-        PlaySong(sPresentation);
+        StartCoroutine( PlaySong(sPresentation));
     }
     public void dashSound()
     {
-        PlaySong(sDash);
+        StartCoroutine(PlaySong(sDash));
     }
+
+    public void Reiatsu1()
+    {
+        StartCoroutine(PlaySong(r1));
+    }
+    public void Reiatsu2()
+    {
+        StartCoroutine(PlaySong(r2));
+    }
+    public void Reiatsu3()
+    {
+        StartCoroutine(PlaySong(r3));
+    }
+    
 }

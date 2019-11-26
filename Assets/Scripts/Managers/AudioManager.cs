@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class AudioManager : Singleton<AudioManager>
 {
-    void Awake() {
+    private AudioSource audioSource;
+    void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
         if (Instance != null && Instance != this) {
             Destroy(this.gameObject);
             return;
@@ -12,5 +15,17 @@ public class AudioManager : Singleton<AudioManager>
             setInstance(this);
         }
         DontDestroyOnLoad(this.gameObject);
+    }
+
+    public void Play(AudioClip clip,bool loop)
+    {
+        audioSource.clip = clip;
+        audioSource.loop = loop;
+        audioSource.Play();
+    }
+
+    public bool isPlaying()
+    {
+        return audioSource.isPlaying;
     }
 }

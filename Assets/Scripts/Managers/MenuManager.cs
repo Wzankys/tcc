@@ -9,7 +9,7 @@ public class MenuManager : MonoBehaviour
 
     public GameObject audioManager;
 
-    private AudioSource audioSource;
+    //private AudioSource audioSource;
     public AudioClip transitionSound;
     
     // Start is called before the first frame update
@@ -17,7 +17,6 @@ public class MenuManager : MonoBehaviour
     {
         start = "Start";
         cancel = "Cancel";
-        audioSource = audioManager.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -37,10 +36,8 @@ public class MenuManager : MonoBehaviour
 
     IEnumerator LoadSceneCoroutine()
     {
-        audioSource.clip = transitionSound;
-        audioSource.loop = false;
-        audioSource.Play();
-        yield return new WaitWhile(()=>audioSource.isPlaying);
+       AudioManager.Instance.Play(transitionSound,false);
+        yield return new WaitWhile(()=>AudioManager.Instance.isPlaying());
         SceneManager.LoadScene("Select");
     }
 }

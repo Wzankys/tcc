@@ -5,15 +5,15 @@ using UnityEngine;
 public class MusicManager : MonoBehaviour {
 	public AudioClip musicMenu;
 
-	void Awake ()
+	void Start ()
 	{
-		
-		var gameObject = GameObject.Find ("Music Manager");
+		AudioManager.Instance.Play(musicMenu,true);
+		/*var gameObject = GameObject.Find ("Music Manager");
 		AudioSource audioSource = gameObject.GetComponent<AudioSource> ();
 		if (audioSource != null) {
 			audioSource.clip = musicMenu;
 			audioSource.loop = true;
 			audioSource.Play ();
-		}
+		}*/
 	}
 }
